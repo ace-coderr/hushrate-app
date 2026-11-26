@@ -42,6 +42,7 @@
       },
       "public_rpc_url": "https://ethereum-sepolia-rpc.publicnode.com",
       "public_rpc_fallbacks": [
+        "https://sepolia.gateway.tenderly.co",
         "https://1rpc.io/sepolia"
       ]
     },
