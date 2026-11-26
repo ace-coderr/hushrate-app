@@ -1,0 +1,125 @@
+{
+  "schema": 1,
+  "interval_start": "2026-11-21T17:00:00Z",
+  "recorded_at": "2026-11-21T17:17:21.037Z",
+  "block_height": 976931,
+  "btc_usd": 60096.3,
+  "hashprice": {
+    "value_sats_per_ph_day": 46904.516558,
+    "source": "telegraph",
+    "label": "Telegraph miner 71083: equals the public single-block value at block 976931 within 1% (0.000% apart)",
+    "public_144": {
+      "tip": 976931,
+      "blocks": 144,
+      "from_height": 976788,
+      "to_height": 976931,
+      "hashprice_sats_per_ph_day": 46938.08599309916,
+      "min_block": 46626.97267383996,
+      "max_block": 47919.261378632866
+    },
+    "telegraph": {
+      "intent": "MINING_HASHPRICE_VERIFY_GENERAL",
+      "requested_miner": "71083",
+      "miner_id": "71083",
+      "miner_name": "Bitcoin Block Hashprice",
+      "http_status": 200,
+      "paid": true,
+      "cost_usd": 0.01,
+      "field_status": {
+        "hashprice_sats_per_ph_day": "ok",
+        "block_height": "ok",
+        "hashrate_eh_s": "ok",
+        "hashprice_usd_per_ph_day": "missing"
+      },
+      "value": 46904.516558,
+      "returned_height": 976931,
+      "signal_hash": "0xbc6221c24500dd6c28ef94f27c2160c2beaa4f04c725542e12080ec77711e0d5",
+      "rail": "escrow",
+      "receipt_hash": "0xb7195740b9511d9419dca0ee382b4b844e7afd0343d3445c710027aa8b935084",
+      "epoch_id": 32,
+      "tx_hash": null,
+      "receipt_file": "2026-11-21T17-17-29-608Z-hashprice-976931.json",
+      "accepted": true
+    },
+    "public_at_telegraph_height": 46904.516558046846,
+    "comparison": "single_block_at_returned_height",
+    "tolerance_rel": 0.01,
+    "miner_role": "primary"
+  },
+  "btc": {
+    "value_usd": 60096.3,
+    "source": "telegraph",
+    "label": "Telegraph miner 7320, within 0.5% of the public mempool.space price",
+    "public_usd": 60084,
+    "tolerance_rel": 0.005,
+    "telegraph": {
+      "intent": "CRYPTO_PRICE_USD",
+      "requested_miner": "7320",
+      "miner_id": "7320",
+      "miner_name": "FinWire Crypto Price",
+      "http_status": 200,
+      "paid": true,
+      "cost_usd": 0.01,
+      "field_status": {
+        "price_usd": "ok"
+      },
+      "value": 60096.3,
+      "returned_height": null,
+      "signal_hash": "0x36948237437a141ecf66427fd00dbfbc323dd83bcab6a6701b659bde357613c3",
+      "rail": "escrow",
+      "receipt_hash": "0xbee19c3a67edf33468dbaf04710897e0efed303a29fcccdf1f48d9e91144c13b",
+      "epoch_id": 32,
+      "tx_hash": null,
+      "receipt_file": "2026-11-21T17-17-32-497Z-btc-2026-11-21T17-00-00Z.json",
+      "accepted": true
+    }
+  },
+  "power": [
+    {
+      "node": "TH_SP15_GEN-APND",
+      "day_ahead_usd_per_mwh": -3.77323,
+      "day_ahead_interval": "2026-11-21T17:00:00.000Z",
+      "real_time_usd_per_mwh": -2.23471,
+      "real_time_interval": "2026-11-21T17:15:00.000Z",
+      "telegraph": null,
+      "errors": []
+    },
+    {
+      "node": "TH_NP15_GEN-APND",
+      "day_ahead_usd_per_mwh": 53,
+      "day_ahead_interval": "2026-11-21T17:00:00.000Z",
+      "real_time_usd_per_mwh": 37.75193,
+      "real_time_interval": "2026-11-21T17:15:00.000Z",
+      "telegraph": null,
+      "errors": []
+    },
+    {
+      "node": "TH_ZP26_GEN-APND",
+      "day_ahead_usd_per_mwh": 3.84206,
+      "day_ahead_interval": "2026-11-21T17:00:00.000Z",
+      "real_time_usd_per_mwh": -8.1629,
+      "real_time_interval": "2026-11-21T17:15:00.000Z",
+      "telegraph": null,
+      "errors": []
+    }
+  ],
+  "spend": {
+    "paid_calls": 2,
+    "cost_usd": 0.02
+  },
+  "wallet_usdc_after": "5.78",
+  "notes": [],
+  "degraded": [],
+  "payment": {
+    "rail": "escrow",
+    "rail_reason": "escrow funded: 6700000 uUSDC available",
+    "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+    "network": "eip155:11155111",
+    "pay_to": "0x72a70e949362670Bf8bceAd24eFC5b8f950aa08b",
+    "requested": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+    "allowed": [
+      "0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238",
+      "0xcc194e1a843B658526D0D5C431f670028582Ae17"
+    ]
+  }
+}

@@ -1,0 +1,2200 @@
+[
+  {
+    "receipt_hash": "0xd9f58b5d4f3f8aea887d1a3ca15c5a5637934b4af705ec59afffc8dec84778c3",
+    "epoch_id": 12,
+    "checked_at": "2026-11-18T22:18:09.977Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xb44d66b2e9faf1faf7d178fd7ecff7a3d72c48444156147bdb7656a0efda39d2"
+  },
+  {
+    "receipt_hash": "0xd6b8eb9385f437d3128280035eb8d4571c9bcfdd249bf4de513ce661bb0c1f41",
+    "epoch_id": 12,
+    "checked_at": "2026-11-18T22:18:10.236Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xb44d66b2e9faf1faf7d178fd7ecff7a3d72c48444156147bdb7656a0efda39d2"
+  },
+  {
+    "receipt_hash": "0x25159da56ef04e789ddee6cccfe65433def6c3c57fe07338378784178d7905b1",
+    "epoch_id": 13,
+    "checked_at": "2026-11-19T03:18:06.909Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xe74dfadcf6795dd3347f505dffcde7c82886e119c105a41c0a9079ad6d8fa749"
+  },
+  {
+    "receipt_hash": "0xdb6ad46537a71183330be315ffdbfc0cc4da19340a595be6a15495ec6cee514a",
+    "epoch_id": 13,
+    "checked_at": "2026-11-19T03:18:07.172Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xe74dfadcf6795dd3347f505dffcde7c82886e119c105a41c0a9079ad6d8fa749"
+  },
+  {
+    "receipt_hash": "0xbaaff348553ff1bbd52705b2b0d8cc2e1b1b6859623ea91125367300f315baf4",
+    "epoch_id": 13,
+    "checked_at": "2026-11-19T03:18:07.440Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xe74dfadcf6795dd3347f505dffcde7c82886e119c105a41c0a9079ad6d8fa749"
+  },
+  {
+    "receipt_hash": "0x632e88f53c0e860341095ba6913198e735836d8845f8171dae8ff7f74ac5e884",
+    "epoch_id": 13,
+    "checked_at": "2026-11-19T03:18:07.708Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xe74dfadcf6795dd3347f505dffcde7c82886e119c105a41c0a9079ad6d8fa749"
+  },
+  {
+    "receipt_hash": "0x11da71cf55c39b74e9fec7d6f3a98a5e7dd87724a5158d53e2aec92df0d39a03",
+    "epoch_id": 13,
+    "checked_at": "2026-11-19T03:18:07.975Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xe74dfadcf6795dd3347f505dffcde7c82886e119c105a41c0a9079ad6d8fa749"
+  },
+  {
+    "receipt_hash": "0x4e1c6bc243a55d5e275b628ed0bec7493e9a1e89f0db24e6844801f554a0cf77",
+    "epoch_id": 13,
+    "checked_at": "2026-11-19T03:18:08.249Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xe74dfadcf6795dd3347f505dffcde7c82886e119c105a41c0a9079ad6d8fa749"
+  },
+  {
+    "receipt_hash": "0xf671e0b33f2a1de51454df39985ef9f28f956340e58d7dbc9a372218ee726709",
+    "epoch_id": 13,
+    "checked_at": "2026-11-19T03:18:08.513Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xe74dfadcf6795dd3347f505dffcde7c82886e119c105a41c0a9079ad6d8fa749"
+  },
+  {
+    "receipt_hash": "0x0bf8cfd4e0e32834307ccc0652b7c099b41b7444790a81fb0ed4fc95f3e9ca5c",
+    "epoch_id": 13,
+    "checked_at": "2026-11-19T03:18:08.785Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xe74dfadcf6795dd3347f505dffcde7c82886e119c105a41c0a9079ad6d8fa749"
+  },
+  {
+    "receipt_hash": "0x39c3a631d776563b7f71adff87a61d3ee37fb6e971deb1a782853143d9ee7021",
+    "epoch_id": 13,
+    "checked_at": "2026-11-19T03:18:09.055Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xe74dfadcf6795dd3347f505dffcde7c82886e119c105a41c0a9079ad6d8fa749"
+  },
+  {
+    "receipt_hash": "0xeda4692fc1ece3c97bc956d3803b14fd86f67285a61715b5a7b96091cac44f25",
+    "epoch_id": 13,
+    "checked_at": "2026-11-19T03:18:09.306Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xe74dfadcf6795dd3347f505dffcde7c82886e119c105a41c0a9079ad6d8fa749"
+  },
+  {
+    "receipt_hash": "0xe539aca86c8c625934d2ae041eae34792d134b2d8a6f8d9a81f8dbcb1436934a",
+    "epoch_id": 14,
+    "checked_at": "2026-11-19T06:18:11.458Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x44188cab7fd65457cae61ac01deb5f858289f6654dc3c83b91402a93e35d82e4"
+  },
+  {
+    "receipt_hash": "0xce6d7b8fac58751180acaf902375629fec7c9b954178088e7a3178fbc10f1a83",
+    "epoch_id": 14,
+    "checked_at": "2026-11-19T06:18:11.653Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x44188cab7fd65457cae61ac01deb5f858289f6654dc3c83b91402a93e35d82e4"
+  },
+  {
+    "receipt_hash": "0x995d83e1a7f34e4ec639e5896923f18eaceb9e849c6e1373a63ba234c1e7bb3a",
+    "epoch_id": 14,
+    "checked_at": "2026-11-19T06:18:11.845Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x44188cab7fd65457cae61ac01deb5f858289f6654dc3c83b91402a93e35d82e4"
+  },
+  {
+    "receipt_hash": "0x8fbb991436a857719ea8643ab5d550453bcf988f904a7db9a390d8f95c47c392",
+    "epoch_id": 14,
+    "checked_at": "2026-11-19T06:18:12.033Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x44188cab7fd65457cae61ac01deb5f858289f6654dc3c83b91402a93e35d82e4"
+  },
+  {
+    "receipt_hash": "0xd8b676a8f7d18068a914439e34e1ccdb540af6d8e3f6a59c6f2ea5c936094dd3",
+    "epoch_id": 14,
+    "checked_at": "2026-11-19T06:18:12.224Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x44188cab7fd65457cae61ac01deb5f858289f6654dc3c83b91402a93e35d82e4"
+  },
+  {
+    "receipt_hash": "0x2d3a36fb33d47d51954f963c3892fd8d9063d1eeffd4626c53038f608b726759",
+    "epoch_id": 14,
+    "checked_at": "2026-11-19T06:18:12.400Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x44188cab7fd65457cae61ac01deb5f858289f6654dc3c83b91402a93e35d82e4"
+  },
+  {
+    "receipt_hash": "0x80afd7176ecd5351543d878188300e3ad47287d7bc50dc21a613a1d45a9f5ea3",
+    "epoch_id": 15,
+    "checked_at": "2026-11-19T09:18:11.732Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x3451588df8a5f0a9a7c91f60181eab633b9343ee0dff8256798528b409dce093"
+  },
+  {
+    "receipt_hash": "0xd2174202498f9acbc5f9cd1196ae803ae6050e28025008a047849754e1d8a8bd",
+    "epoch_id": 15,
+    "checked_at": "2026-11-19T09:18:11.911Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x3451588df8a5f0a9a7c91f60181eab633b9343ee0dff8256798528b409dce093"
+  },
+  {
+    "receipt_hash": "0x2b62b9d89e360fd0e97aeee0689bbafd9efc1810150163347d1019d15d2409ca",
+    "epoch_id": 15,
+    "checked_at": "2026-11-19T09:18:12.093Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x3451588df8a5f0a9a7c91f60181eab633b9343ee0dff8256798528b409dce093"
+  },
+  {
+    "receipt_hash": "0x312b249d6e680427c06f500e036bb99d7e5a742f75886f98721cb4cad79edd84",
+    "epoch_id": 15,
+    "checked_at": "2026-11-19T09:18:12.274Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x3451588df8a5f0a9a7c91f60181eab633b9343ee0dff8256798528b409dce093"
+  },
+  {
+    "receipt_hash": "0x9ab56f881a5eafa696ee45a42254e0886e8d270d476413a33dd0fce21f9b51c7",
+    "epoch_id": 15,
+    "checked_at": "2026-11-19T09:18:12.449Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x3451588df8a5f0a9a7c91f60181eab633b9343ee0dff8256798528b409dce093"
+  },
+  {
+    "receipt_hash": "0xb10cbf0dac5f0df76cddadd9fe3b02c4d799adcd08671421339bf411eedecd59",
+    "epoch_id": 15,
+    "checked_at": "2026-11-19T09:18:12.619Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x3451588df8a5f0a9a7c91f60181eab633b9343ee0dff8256798528b409dce093"
+  },
+  {
+    "receipt_hash": "0x8c68f27282b458d5db7235c86a10ba0d4881bf9bf6b0aa6b36b9ad8979a2ea99",
+    "epoch_id": 16,
+    "checked_at": "2026-11-19T12:18:05.756Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xe94ff881ab3bf2ff9da623a07d8338af464bc11731dae9046dea5c54056154ea"
+  },
+  {
+    "receipt_hash": "0x7c802a54bc51b431e00319177f4e630b06814bac59bc17ca58a8b85424565bce",
+    "epoch_id": 16,
+    "checked_at": "2026-11-19T12:18:05.942Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xe94ff881ab3bf2ff9da623a07d8338af464bc11731dae9046dea5c54056154ea"
+  },
+  {
+    "receipt_hash": "0xd57506431517b2135e5ff8703dd6d350996c72fcd85eaf4b396825bfa65c5bfa",
+    "epoch_id": 16,
+    "checked_at": "2026-11-19T12:18:06.144Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xe94ff881ab3bf2ff9da623a07d8338af464bc11731dae9046dea5c54056154ea"
+  },
+  {
+    "receipt_hash": "0x9722cb45b8b2b8c6d81a5558d10df22edc61e466f77fbd09be54ba6228c77dda",
+    "epoch_id": 16,
+    "checked_at": "2026-11-19T12:18:06.327Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xe94ff881ab3bf2ff9da623a07d8338af464bc11731dae9046dea5c54056154ea"
+  },
+  {
+    "receipt_hash": "0x746fb5348588ddc2c0d87398f2c8727cd94233b412ad196364aeff51e563785b",
+    "epoch_id": 16,
+    "checked_at": "2026-11-19T12:18:06.499Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xe94ff881ab3bf2ff9da623a07d8338af464bc11731dae9046dea5c54056154ea"
+  },
+  {
+    "receipt_hash": "0x57c27748645921ebf0ceb47f7c38ae4076e524dff6f054c514ad69505e409a54",
+    "epoch_id": 16,
+    "checked_at": "2026-11-19T12:18:06.970Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xe94ff881ab3bf2ff9da623a07d8338af464bc11731dae9046dea5c54056154ea"
+  },
+  {
+    "receipt_hash": "0xf0d271f4ca84a8fdcceb5cf35835f041fb4dfbce9060dc3438fbcd1cbc397d9c",
+    "epoch_id": 17,
+    "checked_at": "2026-11-19T15:18:07.756Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x6e2f202fb067b43cb08a00269c5fdf83cedaa29ae4ecb22c98f12838de55dce4"
+  },
+  {
+    "receipt_hash": "0x6457d26ba673002d5ce0f92a174c29f8b94bce23e856fa35ec74e973597d0fb1",
+    "epoch_id": 17,
+    "checked_at": "2026-11-19T15:18:07.979Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x6e2f202fb067b43cb08a00269c5fdf83cedaa29ae4ecb22c98f12838de55dce4"
+  },
+  {
+    "receipt_hash": "0x312180aa908130fc2bca96c630e997b220371dfe78b6fb39ab3c24acd285da80",
+    "epoch_id": 17,
+    "checked_at": "2026-11-19T15:18:08.219Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x6e2f202fb067b43cb08a00269c5fdf83cedaa29ae4ecb22c98f12838de55dce4"
+  },
+  {
+    "receipt_hash": "0x505df133ca6a826ffd5a5faae78bd264c49c8dc4bc92df42edeeab58b105b1f6",
+    "epoch_id": 17,
+    "checked_at": "2026-11-19T15:18:08.454Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x6e2f202fb067b43cb08a00269c5fdf83cedaa29ae4ecb22c98f12838de55dce4"
+  },
+  {
+    "receipt_hash": "0x12ca77678ba3e837b3315e146df96f06163c7a21ee4733b20a1b797885fa5e84",
+    "epoch_id": 18,
+    "checked_at": "2026-11-19T18:18:16.739Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x1172ffdb0f4421546801ca29f8924f25a49a94b2a870f3b5ae97cbd5cc3c4355"
+  },
+  {
+    "receipt_hash": "0xc98ed9bf18eff15e0709fabbe5da823a32766e2323f49b669a77e767dcfee1e0",
+    "epoch_id": 18,
+    "checked_at": "2026-11-19T18:18:17.037Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x1172ffdb0f4421546801ca29f8924f25a49a94b2a870f3b5ae97cbd5cc3c4355"
+  },
+  {
+    "receipt_hash": "0x26f0846a64d8a6a397a587e45d0162f885c8ec5445983a836b3d544be428db0b",
+    "epoch_id": 18,
+    "checked_at": "2026-11-19T18:18:17.334Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x1172ffdb0f4421546801ca29f8924f25a49a94b2a870f3b5ae97cbd5cc3c4355"
+  },
+  {
+    "receipt_hash": "0x5abaabc941b7bdfcd19f65be2136ff21669be6315f72a65680b34066737df703",
+    "epoch_id": 18,
+    "checked_at": "2026-11-19T18:18:17.628Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x1172ffdb0f4421546801ca29f8924f25a49a94b2a870f3b5ae97cbd5cc3c4355"
+  },
+  {
+    "receipt_hash": "0x627027a1dc77ec58af4f46389fff2919eadfc708a946375b711904d42316f634",
+    "epoch_id": 18,
+    "checked_at": "2026-11-19T18:18:17.912Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x1172ffdb0f4421546801ca29f8924f25a49a94b2a870f3b5ae97cbd5cc3c4355"
+  },
+  {
+    "receipt_hash": "0x0ca71898114d00148032ee6e527d21f262b8842c06f5da8abe9488e36ba3eb78",
+    "epoch_id": 18,
+    "checked_at": "2026-11-19T18:18:18.202Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x1172ffdb0f4421546801ca29f8924f25a49a94b2a870f3b5ae97cbd5cc3c4355"
+  },
+  {
+    "receipt_hash": "0xc5832c9ded2c76da84db214376f3ebd0cc3ae5b7eebf42fb8a42c2bbad6e990d",
+    "epoch_id": 19,
+    "checked_at": "2026-11-19T22:18:09.501Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xead15421f6180c88b8dda93f7274d990ed9fca1714a7c01b4b8c594c5b35e60a"
+  },
+  {
+    "receipt_hash": "0x690d93ab1be5878c5231a819f3f96bf70695f627eec1258cc5c00d7ffa468ed2",
+    "epoch_id": 19,
+    "checked_at": "2026-11-19T22:18:09.747Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xead15421f6180c88b8dda93f7274d990ed9fca1714a7c01b4b8c594c5b35e60a"
+  },
+  {
+    "receipt_hash": "0x646bc16dc1f44e64a1ed1406fc306ad6d39b87723348b45af21cfd94b7bd65b4",
+    "epoch_id": 19,
+    "checked_at": "2026-11-19T22:18:10.001Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xead15421f6180c88b8dda93f7274d990ed9fca1714a7c01b4b8c594c5b35e60a"
+  },
+  {
+    "receipt_hash": "0x873402422f394137c4c20134231d3432745b15befe2b714f0bc3395dddabe427",
+    "epoch_id": 19,
+    "checked_at": "2026-11-19T22:18:10.246Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xead15421f6180c88b8dda93f7274d990ed9fca1714a7c01b4b8c594c5b35e60a"
+  },
+  {
+    "receipt_hash": "0xa3e1e815331d2c6bd36262a48880dc3e086d88022e7f9057f81c0fa78deeb250",
+    "epoch_id": 19,
+    "checked_at": "2026-11-19T22:18:10.482Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xead15421f6180c88b8dda93f7274d990ed9fca1714a7c01b4b8c594c5b35e60a"
+  },
+  {
+    "receipt_hash": "0xccbcb3a53e835f7bf2fac945bb50f48ad263bb6fb6968e3abf6a411dc6cfa1f7",
+    "epoch_id": 19,
+    "checked_at": "2026-11-19T22:18:10.727Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xead15421f6180c88b8dda93f7274d990ed9fca1714a7c01b4b8c594c5b35e60a"
+  },
+  {
+    "receipt_hash": "0x5815eaa36e5793656ab98872f3deffbba3ed9d934ac839c503d4248ca90efb82",
+    "epoch_id": 19,
+    "checked_at": "2026-11-19T22:18:10.972Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xead15421f6180c88b8dda93f7274d990ed9fca1714a7c01b4b8c594c5b35e60a"
+  },
+  {
+    "receipt_hash": "0x62103cdb93e955a934e53913f7bafdad136ee5ab6d4e2c32c1b9654145969fb4",
+    "epoch_id": 19,
+    "checked_at": "2026-11-19T22:18:11.205Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xead15421f6180c88b8dda93f7274d990ed9fca1714a7c01b4b8c594c5b35e60a"
+  },
+  {
+    "receipt_hash": "0xd1445cdb2115642b2b8376ea3f19ca78b918dc56d166521dfba5bb15fb3bee5c",
+    "epoch_id": 20,
+    "checked_at": "2026-11-20T01:18:13.400Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x2fa7d7ff2cab15c0c400ddccbe373db70ebded4283aabcbd2981ce804d2c2a6c"
+  },
+  {
+    "receipt_hash": "0x5c4d4f09ea19c22c10c7599c9cb1c0f9dc61ba4a57a6c37e7c377e67dc32b877",
+    "epoch_id": 20,
+    "checked_at": "2026-11-20T01:18:13.576Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x2fa7d7ff2cab15c0c400ddccbe373db70ebded4283aabcbd2981ce804d2c2a6c"
+  },
+  {
+    "receipt_hash": "0x9d853ed22b3ddd20525135024617d5b63799aad227402965fc2ed6b99c0a3dd3",
+    "epoch_id": 20,
+    "checked_at": "2026-11-20T01:18:13.754Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x2fa7d7ff2cab15c0c400ddccbe373db70ebded4283aabcbd2981ce804d2c2a6c"
+  },
+  {
+    "receipt_hash": "0x8dad47789f8592dfb5b8710465050ed76e63e347001206f1f20751d8278de2e4",
+    "epoch_id": 20,
+    "checked_at": "2026-11-20T01:18:13.924Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x2fa7d7ff2cab15c0c400ddccbe373db70ebded4283aabcbd2981ce804d2c2a6c"
+  },
+  {
+    "receipt_hash": "0x79e23bc758ffe607422190b97c8818e10f0d7f3785e205aa50e709dfc71943ce",
+    "epoch_id": 20,
+    "checked_at": "2026-11-20T01:18:14.087Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x2fa7d7ff2cab15c0c400ddccbe373db70ebded4283aabcbd2981ce804d2c2a6c"
+  },
+  {
+    "receipt_hash": "0x2e001e0db491779b5d5ffc1e5cd613a384e41c88c22d0bb3ddefabcfd82ce729",
+    "epoch_id": 20,
+    "checked_at": "2026-11-20T01:18:14.259Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x2fa7d7ff2cab15c0c400ddccbe373db70ebded4283aabcbd2981ce804d2c2a6c"
+  },
+  {
+    "receipt_hash": "0xa8adc08f2cd17c49e796b994304d8fb8dcf02d29108ddcfa8a5ea7aadd46e030",
+    "epoch_id": 21,
+    "checked_at": "2026-11-20T04:18:18.952Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xb61b1f2d090e92f1026b65864e1d8e8bdf28c5749bd24f1a94bb33a5f7dae332"
+  },
+  {
+    "receipt_hash": "0xcb7bdbd9dc42ffd660eb5a072a1371704e68e3adc2717e84bd8b01e427abd595",
+    "epoch_id": 21,
+    "checked_at": "2026-11-20T04:18:19.187Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xb61b1f2d090e92f1026b65864e1d8e8bdf28c5749bd24f1a94bb33a5f7dae332"
+  },
+  {
+    "receipt_hash": "0x10c9669139114b7c89cd77a0f125a7da3c0b1067ba586f92f48ff90d8bd2d2d2",
+    "epoch_id": 21,
+    "checked_at": "2026-11-20T04:18:19.422Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xb61b1f2d090e92f1026b65864e1d8e8bdf28c5749bd24f1a94bb33a5f7dae332"
+  },
+  {
+    "receipt_hash": "0x2840d5b297835b03f1d31701e40ea7df9fb13cd038c06e937795b4908dba3243",
+    "epoch_id": 21,
+    "checked_at": "2026-11-20T04:18:19.657Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xb61b1f2d090e92f1026b65864e1d8e8bdf28c5749bd24f1a94bb33a5f7dae332"
+  },
+  {
+    "receipt_hash": "0x0af92c89a7f7213bed68619c490f41cecec63cb2744cd3981ce451f055b22cf8",
+    "epoch_id": 21,
+    "checked_at": "2026-11-20T04:18:19.892Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xb61b1f2d090e92f1026b65864e1d8e8bdf28c5749bd24f1a94bb33a5f7dae332"
+  },
+  {
+    "receipt_hash": "0xa69c3a6949875cdd852dde260b034af3a382ebf8d339f4e166c716f2e53622c8",
+    "epoch_id": 21,
+    "checked_at": "2026-11-20T04:18:20.114Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xb61b1f2d090e92f1026b65864e1d8e8bdf28c5749bd24f1a94bb33a5f7dae332"
+  },
+  {
+    "receipt_hash": "0xd55b4955710864daa8a249809c58dfced2cbba5c7cb29da400eba28516bd9294",
+    "epoch_id": 22,
+    "checked_at": "2026-11-20T07:18:08.704Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xdc097c4ad802518e6b407ab191bf85e5d80717654b9c8fdaca9d81f255fa8b17"
+  },
+  {
+    "receipt_hash": "0x9a045443fa37117f16141378b12ac41b9f0b853110e5d73365928aab2587ee3c",
+    "epoch_id": 22,
+    "checked_at": "2026-11-20T07:18:08.873Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xdc097c4ad802518e6b407ab191bf85e5d80717654b9c8fdaca9d81f255fa8b17"
+  },
+  {
+    "receipt_hash": "0xd5238ceddd389d27779e3cf9c163d95ac053f4f52d8e4525dd8c96f1f799b5eb",
+    "epoch_id": 22,
+    "checked_at": "2026-11-20T07:18:09.042Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xdc097c4ad802518e6b407ab191bf85e5d80717654b9c8fdaca9d81f255fa8b17"
+  },
+  {
+    "receipt_hash": "0x6e2cbf250401d9009b6cb7b8f832a9fc6ac20c6dbe938d9798b9db64d69def0f",
+    "epoch_id": 22,
+    "checked_at": "2026-11-20T07:18:09.223Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xdc097c4ad802518e6b407ab191bf85e5d80717654b9c8fdaca9d81f255fa8b17"
+  },
+  {
+    "receipt_hash": "0x44aa90098a49cb2e1e8e69c8cff2048df95818c0bfd8b7f98f7724e27d419d5c",
+    "epoch_id": 23,
+    "checked_at": "2026-11-20T10:18:09.552Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x2363fc19a2d54d8683d4ec7905a50c92797e429002029097a45db160e03fc6b3"
+  },
+  {
+    "receipt_hash": "0x84de1124529086cdfd6e730fe469efed01eb4c3b703d1ad71de597cf9d205d6e",
+    "epoch_id": 23,
+    "checked_at": "2026-11-20T10:18:09.778Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x2363fc19a2d54d8683d4ec7905a50c92797e429002029097a45db160e03fc6b3"
+  },
+  {
+    "receipt_hash": "0x2b3afb07476e6c8ecf6bc4d572c83f80f1c661b98fc63eb193dfa7e12f7afa7e",
+    "epoch_id": 23,
+    "checked_at": "2026-11-20T10:18:10.011Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x2363fc19a2d54d8683d4ec7905a50c92797e429002029097a45db160e03fc6b3"
+  },
+  {
+    "receipt_hash": "0x81750e3ec179fc9cfddeb2dd21fbb0a4140fc40d9861d81b20da7d4127501595",
+    "epoch_id": 23,
+    "checked_at": "2026-11-20T10:18:10.240Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x2363fc19a2d54d8683d4ec7905a50c92797e429002029097a45db160e03fc6b3"
+  },
+  {
+    "receipt_hash": "0xb5191d5c47295e23b6acc14ebd8b070bdc873c4b858d6e1e7ab29bd9bb48ee04",
+    "epoch_id": 23,
+    "checked_at": "2026-11-20T10:18:10.869Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x2363fc19a2d54d8683d4ec7905a50c92797e429002029097a45db160e03fc6b3"
+  },
+  {
+    "receipt_hash": "0xf07b44c7f4f24cfc60c154ce9f8e15bd0f1d8b32e15158d946992b0bcb49b4df",
+    "epoch_id": 23,
+    "checked_at": "2026-11-20T10:18:11.100Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x2363fc19a2d54d8683d4ec7905a50c92797e429002029097a45db160e03fc6b3"
+  },
+  {
+    "receipt_hash": "0x516e91cb5375326e46e09aebb6960bddb18bd97bcf99a0a6766e0243efe1dc2e",
+    "epoch_id": 24,
+    "checked_at": "2026-11-20T13:18:06.282Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x5f4de2e7d2168016e7ee07090b5cf7144068767de4b4afebadc0bc90fc3aaffd"
+  },
+  {
+    "receipt_hash": "0xdb732039f073b0f1fd5ed8c83aa60934dc63760a7622c68e6daa1fef6686061e",
+    "epoch_id": 24,
+    "checked_at": "2026-11-20T13:18:06.515Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x5f4de2e7d2168016e7ee07090b5cf7144068767de4b4afebadc0bc90fc3aaffd"
+  },
+  {
+    "receipt_hash": "0x6f7e1ad77e10f5a260ba05c53492440a70c3b05be112c5c19a265e1442c36baf",
+    "epoch_id": 24,
+    "checked_at": "2026-11-20T13:18:06.773Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x5f4de2e7d2168016e7ee07090b5cf7144068767de4b4afebadc0bc90fc3aaffd"
+  },
+  {
+    "receipt_hash": "0xf3cadcc5a411edcd33d27f5b9cb49c35938efa111cd34e6c751c78ee449ca6ed",
+    "epoch_id": 24,
+    "checked_at": "2026-11-20T13:18:07.034Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x5f4de2e7d2168016e7ee07090b5cf7144068767de4b4afebadc0bc90fc3aaffd"
+  },
+  {
+    "receipt_hash": "0x63b410f01f5f1399d25bc3da3abe0c74c1cad0969a7442445dcffd587d15e19c",
+    "epoch_id": 24,
+    "checked_at": "2026-11-20T13:18:07.307Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x5f4de2e7d2168016e7ee07090b5cf7144068767de4b4afebadc0bc90fc3aaffd"
+  },
+  {
+    "receipt_hash": "0x111899dc64810b97422acb4c6adb95668dff40162c96b20944cfecc3cfa9e907",
+    "epoch_id": 24,
+    "checked_at": "2026-11-20T13:18:07.571Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x5f4de2e7d2168016e7ee07090b5cf7144068767de4b4afebadc0bc90fc3aaffd"
+  },
+  {
+    "receipt_hash": "0x0cd82dfa6b9e709470f200f731744faa8674604dee06634aa62cd593314c7e0c",
+    "epoch_id": 25,
+    "checked_at": "2026-11-20T18:18:07.906Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x9855e24b4609d53fd6a7c76fef8c58c6f4d1c1778fa90e8613e6559f1cd60051"
+  },
+  {
+    "receipt_hash": "0xdb70970764507096c32a1aee2490af05f5a6e1bd287b6212fc878d3a69c6f77c",
+    "epoch_id": 25,
+    "checked_at": "2026-11-20T18:18:08.157Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x9855e24b4609d53fd6a7c76fef8c58c6f4d1c1778fa90e8613e6559f1cd60051"
+  },
+  {
+    "receipt_hash": "0xabb94f5950e34fc0fc0c233d718cbe2f38a45d5cd329b755792123f9a9b8b695",
+    "epoch_id": 25,
+    "checked_at": "2026-11-20T18:18:08.424Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x9855e24b4609d53fd6a7c76fef8c58c6f4d1c1778fa90e8613e6559f1cd60051"
+  },
+  {
+    "receipt_hash": "0x52a16f9cefaf3b7cc99f1dbb4b74ed9b10ca1dbb6f9b8cc80fa9cd8bea6dd1c5",
+    "epoch_id": 25,
+    "checked_at": "2026-11-20T18:18:08.672Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x9855e24b4609d53fd6a7c76fef8c58c6f4d1c1778fa90e8613e6559f1cd60051"
+  },
+  {
+    "receipt_hash": "0x0a84975998079c88038f8a6f316d9acaf3a7ee23b4143b01584606c1a3064e02",
+    "epoch_id": 25,
+    "checked_at": "2026-11-20T18:18:08.933Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x9855e24b4609d53fd6a7c76fef8c58c6f4d1c1778fa90e8613e6559f1cd60051"
+  },
+  {
+    "receipt_hash": "0x95f4fba840dd2444314786d3c1691975569a142fa69a3b93b8669ab47f24d015",
+    "epoch_id": 25,
+    "checked_at": "2026-11-20T18:18:09.183Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x9855e24b4609d53fd6a7c76fef8c58c6f4d1c1778fa90e8613e6559f1cd60051"
+  },
+  {
+    "receipt_hash": "0x082534efe14fdc174e912e712a2079220f23ca7b4793346491564f4113454a92",
+    "epoch_id": 25,
+    "checked_at": "2026-11-20T18:18:09.436Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x9855e24b4609d53fd6a7c76fef8c58c6f4d1c1778fa90e8613e6559f1cd60051"
+  },
+  {
+    "receipt_hash": "0x93e6ea7cb314fffd1f0f416976b596583fde68fdcd3b678329c705db8972c883",
+    "epoch_id": 25,
+    "checked_at": "2026-11-20T18:18:09.687Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x9855e24b4609d53fd6a7c76fef8c58c6f4d1c1778fa90e8613e6559f1cd60051"
+  },
+  {
+    "receipt_hash": "0x43e32ede097050d69049b1ccd5d80195157a20507630e91dc17470071d12effb",
+    "epoch_id": 25,
+    "checked_at": "2026-11-20T18:18:09.949Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x9855e24b4609d53fd6a7c76fef8c58c6f4d1c1778fa90e8613e6559f1cd60051"
+  },
+  {
+    "receipt_hash": "0xf94be08d31623a70a1466f12c89d1df2ba70362d627ae7cf04ffc9aba649d393",
+    "epoch_id": 25,
+    "checked_at": "2026-11-20T18:18:10.213Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x9855e24b4609d53fd6a7c76fef8c58c6f4d1c1778fa90e8613e6559f1cd60051"
+  },
+  {
+    "receipt_hash": "0x129c3f182b83a535c828c1a065083e04e0b1b6ae96dd194973d1c700621b7064",
+    "epoch_id": 26,
+    "checked_at": "2026-11-20T22:18:34.282Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xc36b6f133bc2cd87ba130e2bb0a09ee2c010c727b332ad9c5dcb8c971dc9cdc2"
+  },
+  {
+    "receipt_hash": "0x6a48be33b6d106e2d9c87e7d6d1ec05142530faa22e5f1c8372e2da927a580b4",
+    "epoch_id": 26,
+    "checked_at": "2026-11-20T22:18:34.470Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xc36b6f133bc2cd87ba130e2bb0a09ee2c010c727b332ad9c5dcb8c971dc9cdc2"
+  },
+  {
+    "receipt_hash": "0x3293f083550e72f38af277fd0ff8b562b084d39a0b6acc21564012140baef3de",
+    "epoch_id": 26,
+    "checked_at": "2026-11-20T22:18:34.643Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xc36b6f133bc2cd87ba130e2bb0a09ee2c010c727b332ad9c5dcb8c971dc9cdc2"
+  },
+  {
+    "receipt_hash": "0x8d1ea0bdb458d7c119e382b0ed0d7c519239503322b8cba8b945f7a4cae94b2c",
+    "epoch_id": 26,
+    "checked_at": "2026-11-20T22:18:34.829Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xc36b6f133bc2cd87ba130e2bb0a09ee2c010c727b332ad9c5dcb8c971dc9cdc2"
+  },
+  {
+    "receipt_hash": "0x09d020631f5e5b11c314194b9169bc2f0280164f4159468cab481e2173d42351",
+    "epoch_id": 26,
+    "checked_at": "2026-11-20T22:18:35.011Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xc36b6f133bc2cd87ba130e2bb0a09ee2c010c727b332ad9c5dcb8c971dc9cdc2"
+  },
+  {
+    "receipt_hash": "0x9b34073516c50a88a97220d4e6cb286834b9e92759819cb2c56a197d0b6c05a9",
+    "epoch_id": 26,
+    "checked_at": "2026-11-20T22:18:35.199Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xc36b6f133bc2cd87ba130e2bb0a09ee2c010c727b332ad9c5dcb8c971dc9cdc2"
+  },
+  {
+    "receipt_hash": "0x8cafdc5580881de7c1c0d496e441988b0a92601f5b268f5df58e2b69df862975",
+    "epoch_id": 26,
+    "checked_at": "2026-11-20T22:18:35.374Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xc36b6f133bc2cd87ba130e2bb0a09ee2c010c727b332ad9c5dcb8c971dc9cdc2"
+  },
+  {
+    "receipt_hash": "0x47dac0983567fb3005a30ccae1b590b24ace6ba9dbe6f6bea79fb0b253d60464",
+    "epoch_id": 26,
+    "checked_at": "2026-11-20T22:18:35.545Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xc36b6f133bc2cd87ba130e2bb0a09ee2c010c727b332ad9c5dcb8c971dc9cdc2"
+  },
+  {
+    "receipt_hash": "0xec24fde6c41e332a7340080fb67ecf132b67ce9224f608377e60eedc77625150",
+    "epoch_id": 27,
+    "checked_at": "2026-11-21T01:18:09.111Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x298f253af227257338d6c9db035456962154efa5adfd1b79ffa35f219f183327"
+  },
+  {
+    "receipt_hash": "0x5098da7f7774be10a8480aa425e541cc43233d62af0a5b39a902986023454a1e",
+    "epoch_id": 27,
+    "checked_at": "2026-11-21T01:18:09.297Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x298f253af227257338d6c9db035456962154efa5adfd1b79ffa35f219f183327"
+  },
+  {
+    "receipt_hash": "0xff4c15349d3aa0f162f9ae98c2e22e00c6b25cb1ee883a44d930865ba8d500d1",
+    "epoch_id": 27,
+    "checked_at": "2026-11-21T01:18:09.466Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x298f253af227257338d6c9db035456962154efa5adfd1b79ffa35f219f183327"
+  },
+  {
+    "receipt_hash": "0x205d61891ae0ff6ee6abed4255e1fe037163d63ea954b1de677c480be880f31b",
+    "epoch_id": 27,
+    "checked_at": "2026-11-21T01:18:09.647Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x298f253af227257338d6c9db035456962154efa5adfd1b79ffa35f219f183327"
+  },
+  {
+    "receipt_hash": "0x3f9be0dca729daad6441806540e3e505d34837ff4a10e781e04666085d80e071",
+    "epoch_id": 28,
+    "checked_at": "2026-11-21T05:18:10.049Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x3dce036889e84959ebdebc8c18e7be026e817bf297a1575d3e838a43c15efe51"
+  },
+  {
+    "receipt_hash": "0x3bbab52bfeb9846121ff87a6c751f679f72d7c5c1d09022a6e7f8756582b3b13",
+    "epoch_id": 28,
+    "checked_at": "2026-11-21T05:18:10.288Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x3dce036889e84959ebdebc8c18e7be026e817bf297a1575d3e838a43c15efe51"
+  },
+  {
+    "receipt_hash": "0x507674f60bef9b9ccc2c43702560ea310574af037d0203729e4f490d5229bde7",
+    "epoch_id": 28,
+    "checked_at": "2026-11-21T05:18:10.526Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x3dce036889e84959ebdebc8c18e7be026e817bf297a1575d3e838a43c15efe51"
+  },
+  {
+    "receipt_hash": "0x4aa1e0ce007a19a110e5cedcf37f84c6d33f2e93b6d13fda3e7ad082bb4b8633",
+    "epoch_id": 28,
+    "checked_at": "2026-11-21T05:18:10.776Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x3dce036889e84959ebdebc8c18e7be026e817bf297a1575d3e838a43c15efe51"
+  },
+  {
+    "receipt_hash": "0xacf5b5b504e85ac1b8fa892a6da192cb8055fe2ccd185635be24a7c9020bfcdd",
+    "epoch_id": 28,
+    "checked_at": "2026-11-21T05:18:11.011Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x3dce036889e84959ebdebc8c18e7be026e817bf297a1575d3e838a43c15efe51"
+  },
+  {
+    "receipt_hash": "0x82a92f1d4d0de9b9345e7a9db5e17ac342f2f6bdf3c0e26fd23b49a2b7f67669",
+    "epoch_id": 28,
+    "checked_at": "2026-11-21T05:18:11.253Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x3dce036889e84959ebdebc8c18e7be026e817bf297a1575d3e838a43c15efe51"
+  },
+  {
+    "receipt_hash": "0xa9e43284fafd8398531f545331ccdcd7aea49052e09f68c547883ba4d4fb25c0",
+    "epoch_id": 28,
+    "checked_at": "2026-11-21T05:18:11.491Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x3dce036889e84959ebdebc8c18e7be026e817bf297a1575d3e838a43c15efe51"
+  },
+  {
+    "receipt_hash": "0x780b50b3531dbbc0ffc596dcd5329aafed5b123b1bef10c21797ad7a9dfed9da",
+    "epoch_id": 28,
+    "checked_at": "2026-11-21T05:18:11.743Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x3dce036889e84959ebdebc8c18e7be026e817bf297a1575d3e838a43c15efe51"
+  },
+  {
+    "receipt_hash": "0xd58cf48bf25266c18167f3245c7ee60556b880e67afbea202e44532093f8efe8",
+    "epoch_id": 29,
+    "checked_at": "2026-11-21T08:18:09.575Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x58df9e4b4600539ccc0a2c019d5c22156ce1a8a2c32f8997f44c149c72e68189"
+  },
+  {
+    "receipt_hash": "0x99e9ccf0f96c4510f8f1907e562d839bac8b9f84055edac5cf8a5b90f54dc1c7",
+    "epoch_id": 29,
+    "checked_at": "2026-11-21T08:18:09.794Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x58df9e4b4600539ccc0a2c019d5c22156ce1a8a2c32f8997f44c149c72e68189"
+  },
+  {
+    "receipt_hash": "0xa4839fac0217ed5604489c8541659bb009dd7fbf2847a597b18ebcd3c26b3e60",
+    "epoch_id": 29,
+    "checked_at": "2026-11-21T08:18:10.019Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x58df9e4b4600539ccc0a2c019d5c22156ce1a8a2c32f8997f44c149c72e68189"
+  },
+  {
+    "receipt_hash": "0xbedb75067bdd5365054b37d3773784433f210c50faca87d37b8abdae8fa69d0e",
+    "epoch_id": 29,
+    "checked_at": "2026-11-21T08:18:10.234Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x58df9e4b4600539ccc0a2c019d5c22156ce1a8a2c32f8997f44c149c72e68189"
+  },
+  {
+    "receipt_hash": "0x3c15233764d0018ba0c4b56568b4c325d35ca9d695b086fa636fcd06093c3408",
+    "epoch_id": 29,
+    "checked_at": "2026-11-21T08:18:10.457Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x58df9e4b4600539ccc0a2c019d5c22156ce1a8a2c32f8997f44c149c72e68189"
+  },
+  {
+    "receipt_hash": "0x4c173fe3a388e065f0d63f78845a5da5691255e88efcbc2dc160ab609f888c13",
+    "epoch_id": 29,
+    "checked_at": "2026-11-21T08:18:10.684Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x58df9e4b4600539ccc0a2c019d5c22156ce1a8a2c32f8997f44c149c72e68189"
+  },
+  {
+    "receipt_hash": "0x9a410c74d0a710fd764678d26d77b24baa54adbdf4394673fe78aaea8ee5ef6e",
+    "epoch_id": 30,
+    "checked_at": "2026-11-21T11:18:09.622Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xf4f9f43bb4d0f3e1e55867e3a240a97595fc5f1ec90e77aa08c3d8654dcabe1c"
+  },
+  {
+    "receipt_hash": "0x55b27d5dd2c8d372019161ed79053ab4eeafa2c96b74d5f6e01a52689688da86",
+    "epoch_id": 30,
+    "checked_at": "2026-11-21T11:18:09.816Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xf4f9f43bb4d0f3e1e55867e3a240a97595fc5f1ec90e77aa08c3d8654dcabe1c"
+  },
+  {
+    "receipt_hash": "0x1a0ae64405f76c928b5e05e6e24d5e21a219fe48b901c3e07889def557841fd2",
+    "epoch_id": 30,
+    "checked_at": "2026-11-21T11:18:10.004Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xf4f9f43bb4d0f3e1e55867e3a240a97595fc5f1ec90e77aa08c3d8654dcabe1c"
+  },
+  {
+    "receipt_hash": "0xc2323fb3e10fbd6bfe3d06c260dc3cf33c8b418373fc95a8de4e69f786baed8e",
+    "epoch_id": 30,
+    "checked_at": "2026-11-21T11:18:10.185Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xf4f9f43bb4d0f3e1e55867e3a240a97595fc5f1ec90e77aa08c3d8654dcabe1c"
+  },
+  {
+    "receipt_hash": "0xebf549f3e6898c7a84b7ec0f4828c6c836f070284ed4f5c7cd955bb094c58847",
+    "epoch_id": 30,
+    "checked_at": "2026-11-21T11:18:10.377Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xf4f9f43bb4d0f3e1e55867e3a240a97595fc5f1ec90e77aa08c3d8654dcabe1c"
+  },
+  {
+    "receipt_hash": "0x14b937ef8ae97aeb142a81011273427d1e01e379999bed1f79d4d7706783a93e",
+    "epoch_id": 30,
+    "checked_at": "2026-11-21T11:18:10.556Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xf4f9f43bb4d0f3e1e55867e3a240a97595fc5f1ec90e77aa08c3d8654dcabe1c"
+  },
+  {
+    "receipt_hash": "0x891f4e243d5f718f60b5b3054575fc413976f2fbb56c425055e948b8d7fb4f60",
+    "epoch_id": 31,
+    "checked_at": "2026-11-21T16:18:05.355Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x8a2c6d8ca02026c9cf055c8a2c40f5d4bc87ecbdcb7f674f24fc786ebf4a5005"
+  },
+  {
+    "receipt_hash": "0x4ba93b2a52dc5df2a2321e16f2a010689c420fbfcfb2a79a666525e81f5c31c5",
+    "epoch_id": 31,
+    "checked_at": "2026-11-21T16:18:05.584Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x8a2c6d8ca02026c9cf055c8a2c40f5d4bc87ecbdcb7f674f24fc786ebf4a5005"
+  },
+  {
+    "receipt_hash": "0x874ade1053ecb4b2de66ff93256a2a19f19d2c4bbc72daf8dc4ea87675efbef9",
+    "epoch_id": 31,
+    "checked_at": "2026-11-21T16:18:05.839Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x8a2c6d8ca02026c9cf055c8a2c40f5d4bc87ecbdcb7f674f24fc786ebf4a5005"
+  },
+  {
+    "receipt_hash": "0x1da7ef069533ab4e2a22900bc71eceb23c95afe3affffd1ce9ef0b336b6fae4f",
+    "epoch_id": 31,
+    "checked_at": "2026-11-21T16:18:06.089Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x8a2c6d8ca02026c9cf055c8a2c40f5d4bc87ecbdcb7f674f24fc786ebf4a5005"
+  },
+  {
+    "receipt_hash": "0x186b9199e49abbf1b154cd5e6e95bca2fe157019af6d5653120a251e580f8d08",
+    "epoch_id": 31,
+    "checked_at": "2026-11-21T16:18:06.342Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x8a2c6d8ca02026c9cf055c8a2c40f5d4bc87ecbdcb7f674f24fc786ebf4a5005"
+  },
+  {
+    "receipt_hash": "0xb80fd604a025fb387bf04743dc24028a3385c438b8be00d758c4632e3749df4e",
+    "epoch_id": 31,
+    "checked_at": "2026-11-21T16:18:06.591Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x8a2c6d8ca02026c9cf055c8a2c40f5d4bc87ecbdcb7f674f24fc786ebf4a5005"
+  },
+  {
+    "receipt_hash": "0x3dbe19c0b89c62404f6855814a5b8ffb60d77d39b444d868e52943d705832748",
+    "epoch_id": 31,
+    "checked_at": "2026-11-21T16:18:06.822Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x8a2c6d8ca02026c9cf055c8a2c40f5d4bc87ecbdcb7f674f24fc786ebf4a5005"
+  },
+  {
+    "receipt_hash": "0x16741895d4094b7bb408cd4c06be65bec336fd41587005b84731db8bffc45feb",
+    "epoch_id": 31,
+    "checked_at": "2026-11-21T16:18:07.059Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x8a2c6d8ca02026c9cf055c8a2c40f5d4bc87ecbdcb7f674f24fc786ebf4a5005"
+  },
+  {
+    "receipt_hash": "0x39b768403fa27d89a56d65218aa40b97b8aee7d1f6c33baad8eaf50963e37f1c",
+    "epoch_id": 31,
+    "checked_at": "2026-11-21T16:18:07.288Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x8a2c6d8ca02026c9cf055c8a2c40f5d4bc87ecbdcb7f674f24fc786ebf4a5005"
+  },
+  {
+    "receipt_hash": "0xec728957708eaafa145e280d87146c12c3255d892252619a03a4feebb41c4ce3",
+    "epoch_id": 31,
+    "checked_at": "2026-11-21T16:18:07.527Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x8a2c6d8ca02026c9cf055c8a2c40f5d4bc87ecbdcb7f674f24fc786ebf4a5005"
+  },
+  {
+    "receipt_hash": "0x207b474d3838ef16a3c8ff93138de67bdf1621b6179a65496d8692d76f2176f7",
+    "epoch_id": 32,
+    "checked_at": "2026-11-21T19:18:05.868Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xe7437456b847fc4e65acfcb001f189bed9ba6c3deca4b1f56b3f8056531ec63c"
+  },
+  {
+    "receipt_hash": "0x836b5eb5e04257e8eb79423de153c9633f99f0dc0665b0a92255c8092fb02e3c",
+    "epoch_id": 32,
+    "checked_at": "2026-11-21T19:18:06.110Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xe7437456b847fc4e65acfcb001f189bed9ba6c3deca4b1f56b3f8056531ec63c"
+  },
+  {
+    "receipt_hash": "0xb7195740b9511d9419dca0ee382b4b844e7afd0343d3445c710027aa8b935084",
+    "epoch_id": 32,
+    "checked_at": "2026-11-21T19:18:06.376Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xe7437456b847fc4e65acfcb001f189bed9ba6c3deca4b1f56b3f8056531ec63c"
+  },
+  {
+    "receipt_hash": "0xbee19c3a67edf33468dbaf04710897e0efed303a29fcccdf1f48d9e91144c13b",
+    "epoch_id": 32,
+    "checked_at": "2026-11-21T19:18:06.630Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xe7437456b847fc4e65acfcb001f189bed9ba6c3deca4b1f56b3f8056531ec63c"
+  },
+  {
+    "receipt_hash": "0x3d1f90c29133c4bff317f0ee4d1adaccb40d5beb6fe9e26e986a51b2e2feddd3",
+    "epoch_id": 32,
+    "checked_at": "2026-11-21T19:18:06.896Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xe7437456b847fc4e65acfcb001f189bed9ba6c3deca4b1f56b3f8056531ec63c"
+  },
+  {
+    "receipt_hash": "0x1fa1cbcf5d33bb5e39d8d8dfe68e74325f94c0e56d0f295293b39ea82c679131",
+    "epoch_id": 32,
+    "checked_at": "2026-11-21T19:18:07.137Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xe7437456b847fc4e65acfcb001f189bed9ba6c3deca4b1f56b3f8056531ec63c"
+  },
+  {
+    "receipt_hash": "0x668042bf14f2c9285f2b3ce8c12882e966690f75417aa2ba91b77a3c9dccf714",
+    "epoch_id": 33,
+    "checked_at": "2026-11-21T22:18:10.583Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x155a6fd7e5f5f9233a6556ae6ec2f210a24b9d77e9f06b989f802175764690bf"
+  },
+  {
+    "receipt_hash": "0xc25db181ea955e7127b7a586fa5be31d8a9cc78fea9ecf1a5cba0c24ce260afc",
+    "epoch_id": 33,
+    "checked_at": "2026-11-21T22:18:10.745Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x155a6fd7e5f5f9233a6556ae6ec2f210a24b9d77e9f06b989f802175764690bf"
+  },
+  {
+    "receipt_hash": "0x03a1de0d06a3111cf9a69d123b67fdf38143ee096baa532530569fd66ada1f0a",
+    "epoch_id": 33,
+    "checked_at": "2026-11-21T22:18:10.906Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x155a6fd7e5f5f9233a6556ae6ec2f210a24b9d77e9f06b989f802175764690bf"
+  },
+  {
+    "receipt_hash": "0xe2deabb1c6cd810b96c7106cfc64ae204c9ebdcd2ebaf07cdba84290e225bd4e",
+    "epoch_id": 33,
+    "checked_at": "2026-11-21T22:18:11.069Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x155a6fd7e5f5f9233a6556ae6ec2f210a24b9d77e9f06b989f802175764690bf"
+  },
+  {
+    "receipt_hash": "0xb43ff87547ca70fa72b267b6d1ac1d57b7c77246e4fe311b9302ce30bbd5cd10",
+    "epoch_id": 33,
+    "checked_at": "2026-11-21T22:18:11.248Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x155a6fd7e5f5f9233a6556ae6ec2f210a24b9d77e9f06b989f802175764690bf"
+  },
+  {
+    "receipt_hash": "0x0f1eb31e4d4027568a32f3e115db667f73a66517acf07ba39ca9087b60ea0b6a",
+    "epoch_id": 33,
+    "checked_at": "2026-11-21T22:18:11.429Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x155a6fd7e5f5f9233a6556ae6ec2f210a24b9d77e9f06b989f802175764690bf"
+  },
+  {
+    "receipt_hash": "0x0a14dc580f8ab78e1d526fa756f3e16398001723b6b2582ccdb6a6af51623109",
+    "epoch_id": 34,
+    "checked_at": "2026-11-22T01:18:12.269Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xeaf46e49ae8e5dd3dcfe867c8bc95acc2f7457abee468e7b976d5b3f14e35b95"
+  },
+  {
+    "receipt_hash": "0x2bcbe71a086db7caf9c7cd315e0343c1bfa446a2f73065e9de20d760fc74fd24",
+    "epoch_id": 34,
+    "checked_at": "2026-11-22T01:18:12.438Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xeaf46e49ae8e5dd3dcfe867c8bc95acc2f7457abee468e7b976d5b3f14e35b95"
+  },
+  {
+    "receipt_hash": "0x541dd5e35bf6d666679ca756e3531ab6a1aa7d8f06af314eea45c5d168ec6809",
+    "epoch_id": 34,
+    "checked_at": "2026-11-22T01:18:12.618Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xeaf46e49ae8e5dd3dcfe867c8bc95acc2f7457abee468e7b976d5b3f14e35b95"
+  },
+  {
+    "receipt_hash": "0xb467fb5786b043bcf0fd51b948800610cad07879b768df276c3cc90eb47e6cf7",
+    "epoch_id": 34,
+    "checked_at": "2026-11-22T01:18:12.782Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xeaf46e49ae8e5dd3dcfe867c8bc95acc2f7457abee468e7b976d5b3f14e35b95"
+  },
+  {
+    "receipt_hash": "0xd4ffd5455ef9b0b5d1b92ec28b2c8daa5e72cd4f9f5f04ae986ba14a871c8973",
+    "epoch_id": 34,
+    "checked_at": "2026-11-22T01:18:12.960Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xeaf46e49ae8e5dd3dcfe867c8bc95acc2f7457abee468e7b976d5b3f14e35b95"
+  },
+  {
+    "receipt_hash": "0xbc113853a1a1f409b8c232597feb5889667e68a32a6419d8485e78f7d2b606f7",
+    "epoch_id": 34,
+    "checked_at": "2026-11-22T01:18:13.129Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xeaf46e49ae8e5dd3dcfe867c8bc95acc2f7457abee468e7b976d5b3f14e35b95"
+  },
+  {
+    "receipt_hash": "0x15f4e908611db8761cc95d1472039a4b91da5e7fe0b82ca2efadf7c52e17f82f",
+    "epoch_id": 34,
+    "checked_at": "2026-11-22T01:18:13.301Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xeaf46e49ae8e5dd3dcfe867c8bc95acc2f7457abee468e7b976d5b3f14e35b95"
+  },
+  {
+    "receipt_hash": "0xf95e88a10fbaeda320ea3a40648e5e39b2b7046bf479629618f05761ab713630",
+    "epoch_id": 34,
+    "checked_at": "2026-11-22T01:18:13.471Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xeaf46e49ae8e5dd3dcfe867c8bc95acc2f7457abee468e7b976d5b3f14e35b95"
+  },
+  {
+    "receipt_hash": "0x81be7233a4e2f13ae0674b92b0fb82c9b267fab8dd7c983472fbd63365d8d4c8",
+    "epoch_id": 35,
+    "checked_at": "2026-11-22T05:18:06.568Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x47e93e0d0acdadd40bc4186c42eb365ff52763f675787a194697943f66e29c4a"
+  },
+  {
+    "receipt_hash": "0xd7b9aeca2b8df1baf9acb0fda8281816b7585b1324843718935679e73074775d",
+    "epoch_id": 35,
+    "checked_at": "2026-11-22T05:18:06.742Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x47e93e0d0acdadd40bc4186c42eb365ff52763f675787a194697943f66e29c4a"
+  },
+  {
+    "receipt_hash": "0x50cb6a3a8927590a5f42b0904a2da34d9b420a31c65a3fd0a377774e7fb24074",
+    "epoch_id": 35,
+    "checked_at": "2026-11-22T05:18:06.911Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x47e93e0d0acdadd40bc4186c42eb365ff52763f675787a194697943f66e29c4a"
+  },
+  {
+    "receipt_hash": "0x3b36e2b0126983d3b51002d6a23a50e399939f20704d9f6b23bd13549c5d94de",
+    "epoch_id": 35,
+    "checked_at": "2026-11-22T05:18:07.081Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x47e93e0d0acdadd40bc4186c42eb365ff52763f675787a194697943f66e29c4a"
+  },
+  {
+    "receipt_hash": "0xc970ae1f689fe3d15acef754990b27026c86058853d518cee7dbf954299b4123",
+    "epoch_id": 36,
+    "checked_at": "2026-11-22T09:18:04.026Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xdd5a5579db0f3f6e837603e1ba7469f5838f900bb9e6f1be2d55d64727e0b905"
+  },
+  {
+    "receipt_hash": "0x3b93d199dadb713efa58f90118b9b7fcaf1e64d34ca8763f766d80429cbb3c5e",
+    "epoch_id": 36,
+    "checked_at": "2026-11-22T09:18:04.203Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xdd5a5579db0f3f6e837603e1ba7469f5838f900bb9e6f1be2d55d64727e0b905"
+  },
+  {
+    "receipt_hash": "0xe7d087c826c7be20a2f9dbbd3059db012b77a1a00bc66e66dfad03348e1e3764",
+    "epoch_id": 36,
+    "checked_at": "2026-11-22T09:18:04.384Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xdd5a5579db0f3f6e837603e1ba7469f5838f900bb9e6f1be2d55d64727e0b905"
+  },
+  {
+    "receipt_hash": "0x62e393efbc1340912c419802f3a79413f2ebfd501f8eb5fba73afca362be8e1f",
+    "epoch_id": 36,
+    "checked_at": "2026-11-22T09:18:04.571Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xdd5a5579db0f3f6e837603e1ba7469f5838f900bb9e6f1be2d55d64727e0b905"
+  },
+  {
+    "receipt_hash": "0xff03647d0d66348a704e4f224b66b6b35703d3a306b02e51887783aff7b1709e",
+    "epoch_id": 36,
+    "checked_at": "2026-11-22T09:18:04.762Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xdd5a5579db0f3f6e837603e1ba7469f5838f900bb9e6f1be2d55d64727e0b905"
+  },
+  {
+    "receipt_hash": "0x2844fb057274bfa4a147ec786230b02760c3f2059e92c34845051ce22b09ac14",
+    "epoch_id": 36,
+    "checked_at": "2026-11-22T09:18:04.939Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xdd5a5579db0f3f6e837603e1ba7469f5838f900bb9e6f1be2d55d64727e0b905"
+  },
+  {
+    "receipt_hash": "0x7e87e25483e5ad7f3dc1f91b534d4d29c755261067f2b83aaa944ea45ced12f2",
+    "epoch_id": 36,
+    "checked_at": "2026-11-22T09:18:05.137Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xdd5a5579db0f3f6e837603e1ba7469f5838f900bb9e6f1be2d55d64727e0b905"
+  },
+  {
+    "receipt_hash": "0x4caa435c9e12cbfe51284f025777d12668e555019c1c0a42eb1fe99dd6beab55",
+    "epoch_id": 36,
+    "checked_at": "2026-11-22T09:18:05.314Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xdd5a5579db0f3f6e837603e1ba7469f5838f900bb9e6f1be2d55d64727e0b905"
+  },
+  {
+    "receipt_hash": "0x80edb59027585806bca065791d5ae9c074173d7b7dae621b4cc5205fcd3c695c",
+    "epoch_id": 37,
+    "checked_at": "2026-11-22T13:18:11.489Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xd7f58a3d110c6a6a557da177f434153e38d2bf4d4a87fd5c62ed5aa0d5e7c948"
+  },
+  {
+    "receipt_hash": "0x494b925a328c8fc39039c78fe7b6017609e948f300dc66948e0caba59f0ad864",
+    "epoch_id": 37,
+    "checked_at": "2026-11-22T13:18:11.667Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xd7f58a3d110c6a6a557da177f434153e38d2bf4d4a87fd5c62ed5aa0d5e7c948"
+  },
+  {
+    "receipt_hash": "0x849baeb950ef2414895b17b0cdb975fda35607d2ebcf10c8733c0b588aba766d",
+    "epoch_id": 37,
+    "checked_at": "2026-11-22T13:18:11.847Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xd7f58a3d110c6a6a557da177f434153e38d2bf4d4a87fd5c62ed5aa0d5e7c948"
+  },
+  {
+    "receipt_hash": "0x37d6ba10f12de831b30b539c1bc66f607e3f4f3a7506cfc3af92fe99ba61ad95",
+    "epoch_id": 37,
+    "checked_at": "2026-11-22T13:18:12.019Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xd7f58a3d110c6a6a557da177f434153e38d2bf4d4a87fd5c62ed5aa0d5e7c948"
+  },
+  {
+    "receipt_hash": "0xe0dcf251c9406090cf61f71fabd0ad95958eb21865e431b7ff0cc70e4608f705",
+    "epoch_id": 37,
+    "checked_at": "2026-11-22T13:18:12.190Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xd7f58a3d110c6a6a557da177f434153e38d2bf4d4a87fd5c62ed5aa0d5e7c948"
+  },
+  {
+    "receipt_hash": "0xfce2f5243e63848b655d8bc6bd20a6351b000802f6cc3a74b27f156fda67bed0",
+    "epoch_id": 37,
+    "checked_at": "2026-11-22T13:18:12.362Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xd7f58a3d110c6a6a557da177f434153e38d2bf4d4a87fd5c62ed5aa0d5e7c948"
+  },
+  {
+    "receipt_hash": "0xe7a3c6b5ec6c1d1888ca60b90718ca569af8e719958f483373d86e5711fb0222",
+    "epoch_id": 37,
+    "checked_at": "2026-11-22T13:18:12.543Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xd7f58a3d110c6a6a557da177f434153e38d2bf4d4a87fd5c62ed5aa0d5e7c948"
+  },
+  {
+    "receipt_hash": "0xca1999d4a7aeeb312e88d9db67dcc4337e0a8ec0d17839658d166a3961a49493",
+    "epoch_id": 37,
+    "checked_at": "2026-11-22T13:18:12.717Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xd7f58a3d110c6a6a557da177f434153e38d2bf4d4a87fd5c62ed5aa0d5e7c948"
+  },
+  {
+    "receipt_hash": "0x30e1817f9aa387cd8c17287d3a3aebf4fad2d188341f39c5f2791518c8df57ab",
+    "epoch_id": 38,
+    "checked_at": "2026-11-22T18:18:07.262Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xe3af1431808ff100d9a2902dd4202ee0cec6b5854b3eb4f5f9001ca73104fc08"
+  },
+  {
+    "receipt_hash": "0x6d13f77ff07b06d9e2a5f6d2981442017da42d149c6547c81a87ff6efc8738ad",
+    "epoch_id": 38,
+    "checked_at": "2026-11-22T18:18:07.496Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xe3af1431808ff100d9a2902dd4202ee0cec6b5854b3eb4f5f9001ca73104fc08"
+  },
+  {
+    "receipt_hash": "0x38fa866480a70df0e850cc3a5868dbc581b3e6c7bcd8be8d8a21541f593bb718",
+    "epoch_id": 38,
+    "checked_at": "2026-11-22T18:18:07.748Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xe3af1431808ff100d9a2902dd4202ee0cec6b5854b3eb4f5f9001ca73104fc08"
+  },
+  {
+    "receipt_hash": "0x5f5f73ca0337cd77acb778602a984d1bd7927811a9d6e26c8700f6f51c3491ef",
+    "epoch_id": 38,
+    "checked_at": "2026-11-22T18:18:07.999Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xe3af1431808ff100d9a2902dd4202ee0cec6b5854b3eb4f5f9001ca73104fc08"
+  },
+  {
+    "receipt_hash": "0x73610c2c5059f021a9fb0ebde9c27e3a3de185e0f7c7a0c20034e7c9e99264b7",
+    "epoch_id": 38,
+    "checked_at": "2026-11-22T18:18:08.242Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xe3af1431808ff100d9a2902dd4202ee0cec6b5854b3eb4f5f9001ca73104fc08"
+  },
+  {
+    "receipt_hash": "0x2e730efe6ee727f342869707dd5cd9147da04561b52b460c58af5ab987ea9a2c",
+    "epoch_id": 38,
+    "checked_at": "2026-11-22T18:18:08.477Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xe3af1431808ff100d9a2902dd4202ee0cec6b5854b3eb4f5f9001ca73104fc08"
+  },
+  {
+    "receipt_hash": "0xb254a8f19bd8678cca5e2e85e0e980027929dfb8ce6dc2c944084b0ea709fb99",
+    "epoch_id": 38,
+    "checked_at": "2026-11-22T18:18:08.715Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xe3af1431808ff100d9a2902dd4202ee0cec6b5854b3eb4f5f9001ca73104fc08"
+  },
+  {
+    "receipt_hash": "0x64364a25aa7a64e26680bc54c9c0729368c8de1007f8a5b75bfc355b3ca0fa7c",
+    "epoch_id": 38,
+    "checked_at": "2026-11-22T18:18:08.968Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xe3af1431808ff100d9a2902dd4202ee0cec6b5854b3eb4f5f9001ca73104fc08"
+  },
+  {
+    "receipt_hash": "0xfe630c90011ad022280e1b3ba6507af0f32eb4fa1d8d616c9a3c7409d37accae",
+    "epoch_id": 38,
+    "checked_at": "2026-11-22T18:18:09.204Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xe3af1431808ff100d9a2902dd4202ee0cec6b5854b3eb4f5f9001ca73104fc08"
+  },
+  {
+    "receipt_hash": "0x6f518f2670cce4eea53b8d706de14317eb90c2604901ffef057cbccc8f96c964",
+    "epoch_id": 38,
+    "checked_at": "2026-11-22T18:18:09.441Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xe3af1431808ff100d9a2902dd4202ee0cec6b5854b3eb4f5f9001ca73104fc08"
+  },
+  {
+    "receipt_hash": "0x936e27ce04ceccccb0ca134ef857b10eff71dc18d281a3e0a91b2b8825034244",
+    "epoch_id": 39,
+    "checked_at": "2026-11-22T22:18:04.836Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x492ad16cbb535ea12311d9059e05a60d5b7d0c9ead58af55cfb4dad3abd0e12b"
+  },
+  {
+    "receipt_hash": "0x7a08d32b320d28fb52ea164c8f9ef2bfc8f580b2aee5d8d1e7e55d61a6253420",
+    "epoch_id": 39,
+    "checked_at": "2026-11-22T22:18:05.053Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x492ad16cbb535ea12311d9059e05a60d5b7d0c9ead58af55cfb4dad3abd0e12b"
+  },
+  {
+    "receipt_hash": "0x93bf1ccfc0f3f9ffa500609c15a64d963a3ff463817d658850fadfd446c7ecd4",
+    "epoch_id": 39,
+    "checked_at": "2026-11-22T22:18:05.269Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x492ad16cbb535ea12311d9059e05a60d5b7d0c9ead58af55cfb4dad3abd0e12b"
+  },
+  {
+    "receipt_hash": "0x93c4587f010ac01889baa22683bee47e5569b79dfca4e10c90d5009a5fa659fe",
+    "epoch_id": 39,
+    "checked_at": "2026-11-22T22:18:05.475Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x492ad16cbb535ea12311d9059e05a60d5b7d0c9ead58af55cfb4dad3abd0e12b"
+  },
+  {
+    "receipt_hash": "0x15800e8e02d690a8c101260ab0299a8d152fcf6693bb44347b472a9487ccc98c",
+    "epoch_id": 39,
+    "checked_at": "2026-11-22T22:18:05.692Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x492ad16cbb535ea12311d9059e05a60d5b7d0c9ead58af55cfb4dad3abd0e12b"
+  },
+  {
+    "receipt_hash": "0xc3365062a0c4483724780df194c7062db739314054f3b4ab8c1b66359e7651e5",
+    "epoch_id": 39,
+    "checked_at": "2026-11-22T22:18:05.898Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x492ad16cbb535ea12311d9059e05a60d5b7d0c9ead58af55cfb4dad3abd0e12b"
+  },
+  {
+    "receipt_hash": "0x3e9fa1508e6454b6423ad8cb826e12a59e1a664530edb623774fe9a955e06cba",
+    "epoch_id": 39,
+    "checked_at": "2026-11-22T22:18:06.114Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x492ad16cbb535ea12311d9059e05a60d5b7d0c9ead58af55cfb4dad3abd0e12b"
+  },
+  {
+    "receipt_hash": "0xba64ec77d17510a71ff59afc0b1b1d080a2cfcfc5d6137d8b89dbb37965e7204",
+    "epoch_id": 39,
+    "checked_at": "2026-11-22T22:18:06.324Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x492ad16cbb535ea12311d9059e05a60d5b7d0c9ead58af55cfb4dad3abd0e12b"
+  },
+  {
+    "receipt_hash": "0x1798e71b568faa2d2d159598a32f0d46f8807df2ee884f193be275573445f390",
+    "epoch_id": 40,
+    "checked_at": "2026-11-23T01:18:12.998Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xdd7d7ed95e78f096e41db4a8ebcf26fc66e84f5f9566de636ba534d091cc0c75"
+  },
+  {
+    "receipt_hash": "0x2093bc8f30dba6511ba5d4087d56f168752a3112a783c1ddf77a742f30c5c192",
+    "epoch_id": 40,
+    "checked_at": "2026-11-23T01:18:13.243Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xdd7d7ed95e78f096e41db4a8ebcf26fc66e84f5f9566de636ba534d091cc0c75"
+  },
+  {
+    "receipt_hash": "0x089c9c3993e9b9c4575244ba638f9551a964214b5fd25ff94784cb25e3d9eacf",
+    "epoch_id": 40,
+    "checked_at": "2026-11-23T01:18:13.472Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xdd7d7ed95e78f096e41db4a8ebcf26fc66e84f5f9566de636ba534d091cc0c75"
+  },
+  {
+    "receipt_hash": "0xac10e0004aaeedeb5859d13d130990e35b8b3db23ad76acd1b0e11596d185dc1",
+    "epoch_id": 40,
+    "checked_at": "2026-11-23T01:18:13.710Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xdd7d7ed95e78f096e41db4a8ebcf26fc66e84f5f9566de636ba534d091cc0c75"
+  },
+  {
+    "receipt_hash": "0x709e3437097c1b3509d93f8df5eb923438d9327c5ed611a237d62ba3b0496c6d",
+    "epoch_id": 40,
+    "checked_at": "2026-11-23T01:18:13.968Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xdd7d7ed95e78f096e41db4a8ebcf26fc66e84f5f9566de636ba534d091cc0c75"
+  },
+  {
+    "receipt_hash": "0x653086fe35694b9b30ca0777d04a8c04b97472faf62e0783b98db68936fb6427",
+    "epoch_id": 40,
+    "checked_at": "2026-11-23T01:18:14.211Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xdd7d7ed95e78f096e41db4a8ebcf26fc66e84f5f9566de636ba534d091cc0c75"
+  },
+  {
+    "receipt_hash": "0x35bcad8362ed9305c2c5aded7b9cfec814e46878f3e7ecef4bbc0f710bc2ef69",
+    "epoch_id": 41,
+    "checked_at": "2026-11-23T06:18:08.015Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xf3872c2e0fc1a9798dfe4206fb386bb1cd69c4d0da42def12802db8e0bd57aa9"
+  },
+  {
+    "receipt_hash": "0xeaf8fe819ea72e6c32ba39302fc9be54d79fb18a6a9fed7d2586a382bdd79869",
+    "epoch_id": 41,
+    "checked_at": "2026-11-23T06:18:08.204Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xf3872c2e0fc1a9798dfe4206fb386bb1cd69c4d0da42def12802db8e0bd57aa9"
+  },
+  {
+    "receipt_hash": "0x399fa84d4576b2fed0ed4d0ccf0b29cf673399a5c1005a8b6e2187cca11711c6",
+    "epoch_id": 41,
+    "checked_at": "2026-11-23T06:18:08.379Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xf3872c2e0fc1a9798dfe4206fb386bb1cd69c4d0da42def12802db8e0bd57aa9"
+  },
+  {
+    "receipt_hash": "0x65ccd11ba99ecd620bef8c8ad986e58a64b6e176817228c28895d0c2bb9c8673",
+    "epoch_id": 41,
+    "checked_at": "2026-11-23T06:18:08.582Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xf3872c2e0fc1a9798dfe4206fb386bb1cd69c4d0da42def12802db8e0bd57aa9"
+  },
+  {
+    "receipt_hash": "0x6fbbfb5808f9c340928cce2ee05d57904d167d69a3519adb0ab3434e6b9ffd24",
+    "epoch_id": 41,
+    "checked_at": "2026-11-23T06:18:08.772Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xf3872c2e0fc1a9798dfe4206fb386bb1cd69c4d0da42def12802db8e0bd57aa9"
+  },
+  {
+    "receipt_hash": "0xd74355ccde34610ca85f8ade8866686dd1a6601b3f7921bfae76f6f393fcf191",
+    "epoch_id": 41,
+    "checked_at": "2026-11-23T06:18:08.946Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xf3872c2e0fc1a9798dfe4206fb386bb1cd69c4d0da42def12802db8e0bd57aa9"
+  },
+  {
+    "receipt_hash": "0x6dccd530cc677d20a6f0fed0d8ef1d96e269d2dc1408bb75721216f17b330c75",
+    "epoch_id": 41,
+    "checked_at": "2026-11-23T06:18:09.144Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xf3872c2e0fc1a9798dfe4206fb386bb1cd69c4d0da42def12802db8e0bd57aa9"
+  },
+  {
+    "receipt_hash": "0x4766b3c156fbcdd3f7caa8a15e1aced75412a5130ec1b99dd5914a9a50c2ce05",
+    "epoch_id": 41,
+    "checked_at": "2026-11-23T06:18:09.335Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xf3872c2e0fc1a9798dfe4206fb386bb1cd69c4d0da42def12802db8e0bd57aa9"
+  },
+  {
+    "receipt_hash": "0xf5043b5e32a4887fddc46bed77f75c1906d3b2c23c267d48bc4d0d23a5b734d3",
+    "epoch_id": 41,
+    "checked_at": "2026-11-23T06:18:09.520Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xf3872c2e0fc1a9798dfe4206fb386bb1cd69c4d0da42def12802db8e0bd57aa9"
+  },
+  {
+    "receipt_hash": "0x53ea6d63bf61d5ab4278a87407da8efa2cd99591e151446c285a111545a5260b",
+    "epoch_id": 41,
+    "checked_at": "2026-11-23T06:18:09.694Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0xf3872c2e0fc1a9798dfe4206fb386bb1cd69c4d0da42def12802db8e0bd57aa9"
+  },
+  {
+    "receipt_hash": "0x36a25772333ecdc0f40fee899089210aea69d6b2b7fae6e392e5418fbb5942ea",
+    "epoch_id": 42,
+    "checked_at": "2026-11-23T10:18:05.000Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x85e2521efed37807fb6baf67b974f6dcfc113a3442984595e66e639451394c7a"
+  },
+  {
+    "receipt_hash": "0xc7ceca48f78336859fc1c71d020714ddc43a2a16893a6539f306f2ba3f622d52",
+    "epoch_id": 42,
+    "checked_at": "2026-11-23T10:18:05.183Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x85e2521efed37807fb6baf67b974f6dcfc113a3442984595e66e639451394c7a"
+  },
+  {
+    "receipt_hash": "0x289ab7e80c9e175cf318200d089b46e7de5a36e742dd5b057c40288c93adf7c6",
+    "epoch_id": 42,
+    "checked_at": "2026-11-23T10:18:05.364Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x85e2521efed37807fb6baf67b974f6dcfc113a3442984595e66e639451394c7a"
+  },
+  {
+    "receipt_hash": "0x9b45114f7973398209f53e2a35816d544868b43bd6f67b0fe55ddd726c40f90e",
+    "epoch_id": 42,
+    "checked_at": "2026-11-23T10:18:05.544Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x85e2521efed37807fb6baf67b974f6dcfc113a3442984595e66e639451394c7a"
+  },
+  {
+    "receipt_hash": "0x6916d2762732eca2993cbc6a35ffa427a8d302fba3710243b870bfb80377e293",
+    "epoch_id": 42,
+    "checked_at": "2026-11-23T10:18:05.724Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x85e2521efed37807fb6baf67b974f6dcfc113a3442984595e66e639451394c7a"
+  },
+  {
+    "receipt_hash": "0x606ee01b4ddfbcd4f10eae2a37e86c4f5c9ae1a6d4969a9dd7e2e52430e233d7",
+    "epoch_id": 42,
+    "checked_at": "2026-11-23T10:18:05.893Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x85e2521efed37807fb6baf67b974f6dcfc113a3442984595e66e639451394c7a"
+  },
+  {
+    "receipt_hash": "0x364e9e1bcb8f4aa973454e21cfb9973e5e78a9cf6606d9e4be03170c555ee837",
+    "epoch_id": 42,
+    "checked_at": "2026-11-23T10:18:06.062Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x85e2521efed37807fb6baf67b974f6dcfc113a3442984595e66e639451394c7a"
+  },
+  {
+    "receipt_hash": "0x92a3c18819725f0ae9c060be0b97cfdf6733de5560064a708e4192c9c4195ff6",
+    "epoch_id": 42,
+    "checked_at": "2026-11-23T10:18:06.529Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x85e2521efed37807fb6baf67b974f6dcfc113a3442984595e66e639451394c7a"
+  },
+  {
+    "receipt_hash": "0x7a7407e75e18af42cc48fd7ea66ec83ce0ee866647acf738870bc7f053946f96",
+    "epoch_id": 43,
+    "checked_at": "2026-11-23T14:18:11.994Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x8ae293e3bd1725c471c1fc9eda30741024ad853f01058d09b0de423cf9dc537d"
+  },
+  {
+    "receipt_hash": "0xd3cae7ae623f09da42ffee021bebf6d68169246e93cd52ab4e20de6642f4c2d3",
+    "epoch_id": 43,
+    "checked_at": "2026-11-23T14:18:12.193Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x8ae293e3bd1725c471c1fc9eda30741024ad853f01058d09b0de423cf9dc537d"
+  },
+  {
+    "receipt_hash": "0x2476c38461cea4a24a3f1d7f8269e60fd6cde212ad8c4eb3e31188741e0b9523",
+    "epoch_id": 43,
+    "checked_at": "2026-11-23T14:18:12.363Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x8ae293e3bd1725c471c1fc9eda30741024ad853f01058d09b0de423cf9dc537d"
+  },
+  {
+    "receipt_hash": "0x745fcc231614982907e1e55ffeb5f26554fade026edb426790f4cbc1d429fca3",
+    "epoch_id": 43,
+    "checked_at": "2026-11-23T14:18:12.547Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x8ae293e3bd1725c471c1fc9eda30741024ad853f01058d09b0de423cf9dc537d"
+  },
+  {
+    "receipt_hash": "0x34fcb6b528cbca67ef7c314935d06a761434ef1dede28f4a6c3101a1a4584643",
+    "epoch_id": 43,
+    "checked_at": "2026-11-23T14:18:12.798Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x8ae293e3bd1725c471c1fc9eda30741024ad853f01058d09b0de423cf9dc537d"
+  },
+  {
+    "receipt_hash": "0x05347cf3c1923d277f356c4bad111cbc9b310aeb075fe5836b8b6a46e6d601ca",
+    "epoch_id": 43,
+    "checked_at": "2026-11-23T14:18:12.970Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x8ae293e3bd1725c471c1fc9eda30741024ad853f01058d09b0de423cf9dc537d"
+  },
+  {
+    "receipt_hash": "0x5c0073579ed57c10fb67e2c879f131551b098036df766a7cfabee1ba698b94a3",
+    "epoch_id": 43,
+    "checked_at": "2026-11-23T14:18:13.143Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x8ae293e3bd1725c471c1fc9eda30741024ad853f01058d09b0de423cf9dc537d"
+  },
+  {
+    "receipt_hash": "0x834b11e6fcf8588604533e6ffec8ffd4b28e312949d695c83c04a5390baeeee8",
+    "epoch_id": 43,
+    "checked_at": "2026-11-23T14:18:13.313Z",
+    "http_status": 200,
+    "billing_verified": true,
+    "status": "verified",
+    "note": "the node's delivery record for this epoch names this wallet as the payer",
+    "deliveries_root": "0x8ae293e3bd1725c471c1fc9eda30741024ad853f01058d09b0de423cf9dc537d"
+  },
+  {
+    "receipt_hash": "0xf2e810953bcdf1ad2162f676f13b54ec1a4d37e71e61cefefd6b0ef5858053c7",
+    "epoch_id": 44,
+    "checked_at": "2026-11-23T14:18:13.490Z",
+    "http_status": 404,
+    "billing_verified": null,
+    "status": "pending",
+    "note": "the epoch's block is not recorded yet (the node answers 404 until it is, up to about an hour on the testnet)"
+  },
+  {
+    "receipt_hash": "0xb901f41d7e758e4d9806f05db3a77a113ec95190a6e1106549ca16591366d2ff",
+    "epoch_id": 44,
+    "checked_at": "2026-11-23T14:18:13.679Z",
+    "http_status": 404,
+    "billing_verified": null,
+    "status": "pending",
+    "note": "the epoch's block is not recorded yet (the node answers 404 until it is, up to about an hour on the testnet)"
+  }
+]

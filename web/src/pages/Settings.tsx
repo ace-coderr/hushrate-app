@@ -1,0 +1,91 @@
+import { PageHead } from "../components/Layout";
+import { BASE, useHistory, useLatest, useLedger, useStatus } from "../lib/data";
+import { Fragment } from "react";
+import { ago, hourLabel, explorerAsset, shortHash } from "../lib/format";
+import { PaidDataBanner } from "../components/PaidDataBanner";
+import { PausedBanner } from "../components/PausedBanner";
+import { MainnetReadiness } from "../components/MainnetReadiness";
+import { useStore } from "../lib/store";
+
+export function Settings() {
+  const { settings, setSettings } = useStore();
+  const status = useStatus();
+  const latest = useLatest();
+  const history = useHistory();
+  const ledger = useLedger();
+  const s = status.data;
+  const lastOk = s?.last_success_at ?? (s?.state === "ok" ? s.updated_at : null);
+  const files = [
+    ["data/latest.json", "Latest market tape"],
+    ["data/history.json", "Rolling hourly history (last 500)"],
+    ["data/ledger.json", "Paid-request ledger"],
+    ["data/status.json", "Agent status"],
+  ];
+
+  return (
+    <>
+      <PageHead kicker="Settings" title="Display and data status.">Preferences stay in this browser. The status panel reads the agent's own status file.</PageHead>
+
+      <PausedBanner />
+      <PaidDataBanner />
+      <div className="grid-cards">
+        <section className="card">
+          <h3>Theme</h3>
+          <div className="seg" role="radiogroup" aria-label="Theme">
+            {(["dark", "light", "system"] as const).map((t) => (
+              <button key={t} role="radio" aria-checked={settings.theme === t} className={settings.theme === t ? "on" : ""} onClick={() => setSettings({ theme: t })}>{t}</button>
+            ))}
+          </div>
+          <h3>Hashprice units</h3>
+          <div className="seg" role="radiogroup" aria-label="Hashprice units">
+            {([["sats", "sats per PH/s per day"], ["usd", "USD per PH/s per day"]] as const).map(([k, l]) => (
+              <button key={k} role="radio" aria-checked={settings.hashUnit === k} className={settings.hashUnit === k ? "on" : ""} onClick={() => setSettings({ hashUnit: k })}>{l}</button>
+            ))}
+          </div>
+          <p className="small muted">Power prices are always dollars per MWh and margins dollars per day, so they match the decision math exactly.</p>
+        </section>
+
+        <section className="card">
+          <h3>Agent status</h3>
+          {status.loading && <p className="muted">Loading…</p>}
+          {status.error && <p className="muted">No status file published yet ({status.error}).</p>}
+
+          {s && (
+            <dl>
+              <dt>State</dt><dd><span className={`badge ${s.state === "ok" ? "run" : s.state === "paused" || s.state === "degraded" ? "hold" : "cut"}`}>{s.state}</span></dd>
+              <dt>Last successful run</dt>
+              <dd>{lastOk ? `${new Date(lastOk).toISOString().slice(0, 16).replace("T", " ")} UTC · ${ago(lastOk)}` : "never recorded"}</dd>
+              <dt>Automation</dt><dd>off: the agent is paused and nothing starts it</dd>
+              <dt>Last status update</dt><dd>{ago(s.updated_at)}</dd>
+              {s.reason && <><dt>Reason</dt><dd>{s.reason}</dd></>}
+              {s.balances?.map((x) => (
+                <Fragment key={x.asset}>
+                  <dt>{x.symbol} balance ({x.role})</dt>
+                  <dd className="mono">{x.balance} <a href={explorerAsset(x.asset)} target="_blank" rel="noopener noreferrer">{shortHash(x.asset, 6, 4)}</a>{s.payment_asset && x.asset.toLowerCase() === s.payment_asset.toLowerCase() ? " · asked for now" : ""}</dd>
+                </Fragment>
+              ))}
+              {!s.balances && s.usdc_balance != null && <><dt>Test-USDC balance</dt><dd className="mono">{s.usdc_balance}</dd></>}
+              {s.escrow && <><dt>Escrow balance (Telegraph)</dt><dd className="mono">{s.escrow.available_usdc != null ? `${s.escrow.available_usdc} USDC available` : "unreadable"}{s.escrow.deposited_usdc != null ? ` · ${s.escrow.deposited_usdc} deposited, ${s.escrow.unbilled_usdc} unbilled` : ""}<br /><small className="muted">{s.escrow.error ?? `read ${ago(s.escrow.read_at)} · funded in USDC ${shortHash(s.escrow.token, 6, 4)} at the Diamond ${shortHash(s.escrow.diamond, 6, 4)}`}</small></dd></>}
+              {s.rail && <><dt>Payment rail (last run)</dt><dd>{s.rail === "escrow" ? "escrow (no facilitator, no per-call transaction)" : s.rail === "exact" ? "exact (settled per call through a facilitator)" : "none: values were public and labelled"}{s.rail_reason ? <><br /><small className="muted">{s.rail_reason}</small></> : null}</dd></>}
+              {s.allowed_assets && <><dt>Pays only</dt><dd>{s.allowed_assets.length} allowed assets, each to its own pinned payee</dd></>}
+              {s.unfunded && <><dt>Funding</dt><dd className="stall">unfunded for {shortHash(s.unfunded_asset ?? s.payment_asset ?? "", 8, 6)}: the node asked for it and the wallet cannot pay</dd></>}
+              {s.hashprice_source && <><dt>Hashprice source</dt><dd>{s.hashprice_source}</dd></>}
+            </dl>
+          )}
+          {s?.degraded && s.degraded.length > 0 && (
+            <div className="notice warn"><b>Degraded run.</b> An upstream source failed; the tape was still recorded and affected sites hold.<ul>{s.degraded.map((d) => <li key={d}>{d}</li>)}</ul></div>
+          )}
+          {latest.data && <p className="small muted">Latest tape: {hourLabel(latest.data.interval_start)}, recorded {ago(latest.data.recorded_at)}. History holds {history.data?.length ?? 0} hour(s); the ledger holds {ledger.data?.length ?? 0} paid request(s).</p>}
+        </section>
+      </div>
+
+      <h2>Mainnet</h2>
+      <MainnetReadiness compact />
+
+      <h2>Published data</h2>
+      <ul className="file-list">
+        {files.map(([f, d]) => <li key={f}><a className="mono" href={`${BASE}${f}`} target="_blank" rel="noopener noreferrer">{f}</a> <span className="muted">{d}</span></li>)}
+      </ul>
+    </>
+  );
+}

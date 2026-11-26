@@ -1,0 +1,22 @@
+{
+  "name": "hushrate",
+  "private": true,
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "workspaces": [
+    "packages/*",
+    "agent",
+    "web"
+  ],
+  "scripts": {
+    "probe": "npm run probe -w agent",
+    "wallet": "npm run wallet -w agent",
+    "agent": "npm run agent -w agent --",
+    "billing": "npm run billing -w agent",
+    "dryrun": "npm run dryrun -w agent --",
+    "test": "npm test -w packages/core && npm test -w packages/mcp && npm test -w agent && npm test -w web",
+    "typecheck": "npm run typecheck -w packages/core && npm run typecheck -w packages/mcp && npm run typecheck -w agent"
+  }
+}

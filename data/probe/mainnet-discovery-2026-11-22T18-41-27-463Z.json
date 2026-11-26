@@ -1,0 +1,304 @@
+{
+  "generated_at": "2026-11-22T18:41:27.463Z",
+  "documented_node": "https://devnode.telegraphprotocol.com",
+  "calls": [
+    {
+      "n": 1,
+      "at": "2026-11-22T18:41:13.302Z",
+      "method": "GET",
+      "url": "https://anjoman.ai/docs/protocol/addresses-and-params",
+      "note": "published documentation page",
+      "status": 200,
+      "bytes": 136577,
+      "result": "3 sentence(s) mention mainnet"
+    },
+    {
+      "n": 2,
+      "at": "2026-11-22T18:41:15.058Z",
+      "method": "GET",
+      "url": "https://anjoman.ai/docs/protocol/how-it-works",
+      "note": "published documentation page",
+      "status": 200,
+      "bytes": 121444,
+      "result": "1 sentence(s) mention mainnet"
+    },
+    {
+      "n": 3,
+      "at": "2026-11-22T18:41:15.507Z",
+      "method": "GET",
+      "url": "https://anjoman.ai/docs/using/x402-inference",
+      "note": "published documentation page",
+      "status": 200,
+      "bytes": 196045,
+      "result": "0 sentence(s) mention mainnet"
+    },
+    {
+      "n": 4,
+      "at": "2026-11-22T18:41:16.359Z",
+      "method": "GET",
+      "url": "https://anjoman.ai/docs/using/escrow-inference",
+      "note": "published documentation page",
+      "status": 200,
+      "bytes": 202131,
+      "result": "1 sentence(s) mention mainnet"
+    },
+    {
+      "n": 5,
+      "at": "2026-11-22T18:41:16.831Z",
+      "method": "GET",
+      "url": "https://anjoman.ai/docs/using/inference-paths",
+      "note": "published documentation page",
+      "status": 200,
+      "bytes": 131354,
+      "result": "0 sentence(s) mention mainnet"
+    },
+    {
+      "n": 6,
+      "at": "2026-11-22T18:41:17.279Z",
+      "method": "GET",
+      "url": "https://anjoman.ai/docs/whats-new-v2",
+      "note": "published documentation page",
+      "status": 200,
+      "bytes": 110815,
+      "result": "0 sentence(s) mention mainnet"
+    },
+    {
+      "n": 7,
+      "at": "2026-11-22T18:41:17.858Z",
+      "method": "GET",
+      "url": "https://anjoman.ai/docs/using/engine-ask",
+      "note": "published documentation page",
+      "status": 200,
+      "bytes": 248163,
+      "result": "0 sentence(s) mention mainnet"
+    },
+    {
+      "n": 8,
+      "at": "2026-11-22T18:41:18.315Z",
+      "method": "GET",
+      "url": "https://devnode.telegraphprotocol.com/api/miners",
+      "note": "miner catalogue on the documented node",
+      "status": 200,
+      "bytes": 3841331,
+      "result": "2188 miners; fields: id, slug, kind, protocol, name, description, endpoints, input_schema, output_schema, signal_mapping, supported_intents, docs, limitations, base_url, wallet_address, fee_address, activation_status, min_price_usdc, yaml_url, registered_at, total_requests_served, scored, last_scored_epoch, last_scored_at, scores"
+    },
+    {
+      "n": 9,
+      "at": "2026-11-22T18:41:22.479Z",
+      "method": "POST",
+      "url": "https://devnode.telegraphprotocol.com/engine/v1/ask/71083",
+      "note": "unpaid request: returns the 402 payment terms, nothing is signed or paid",
+      "status": 402,
+      "bytes": 1100,
+      "result": "HTTP 402; networks eip155:84532, solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1, eip155:11155111"
+    },
+    {
+      "n": 10,
+      "at": "2026-11-22T18:41:23.120Z",
+      "method": "POST",
+      "url": "https://devnode.telegraphprotocol.com/engine/v1/ask/7320",
+      "note": "unpaid request: returns the 402 payment terms, nothing is signed or paid",
+      "status": 402,
+      "bytes": 1098,
+      "result": "HTTP 402; networks eip155:84532, solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1, eip155:11155111"
+    },
+    {
+      "n": 11,
+      "at": "2026-11-22T18:41:24.740Z",
+      "method": "GET",
+      "url": "https://devnode.telegraphprotocol.com/",
+      "note": "documented node root",
+      "status": 200,
+      "bytes": 4,
+      "result": "HTTP 200; 0 mention(s) of mainnet"
+    },
+    {
+      "n": 12,
+      "at": "2026-11-22T18:41:25.290Z",
+      "method": "GET",
+      "url": "https://devnode.telegraphprotocol.com/engine/v1/intents/MINING_HASHPRICE_VERIFY_GENERAL",
+      "note": "intent description on the documented node",
+      "status": 200,
+      "bytes": 35089,
+      "result": "HTTP 200; 2 mention(s) of mainnet"
+    },
+    {
+      "n": 13,
+      "at": "2026-11-22T18:41:26.173Z",
+      "method": "GET",
+      "url": "https://telegraphprotocol.com/",
+      "note": "public site root",
+      "status": 200,
+      "bytes": 282235,
+      "result": "HTTP 200; 1 mention(s) of mainnet"
+    },
+    {
+      "n": 14,
+      "at": "2026-11-22T18:41:26.904Z",
+      "method": "POST",
+      "url": "https://ethereum-rpc.publicnode.com",
+      "note": "read-only JSON-RPC: eth_chainId (no key, no transaction)",
+      "status": 200,
+      "bytes": 40,
+      "result": "chain id 1"
+    }
+  ],
+  "findings": {
+    "docMentions": {
+      "protocol/addresses-and-params": [
+        "Most ask you to sign in, solve a captcha or hold a little mainnet ETH.",
+        "Network Configuration Parameter Value Chain Ethereum Sepolia Chain ID 11155111 Canonical mainnet Ethereum RPC (public, no key) https://ethereum-sepolia-rpc.",
+        "3 failed rounds) Minimum Validator stake Set in USD, paid in MACHINA at the pool price ( protocolParams() ) Unbonding period 21 days Epoch duration 24 hours on mainnet; 1 hour on the testnet Commit phase timeout 45 seconds Reveal phase timeout 45 seconds Leader failover timeout 90 seconds Scoring & Penalties Parameter Value C"
+      ],
+      "protocol/how-it-works": [
+        "The canonical chain for Telegraph mainnet is Ethereum ."
+      ],
+      "using/x402-inference": [],
+      "using/escrow-inference": [
+        "A node on Ethereum mainnet refuses a signature without it."
+      ],
+      "using/inference-paths": [],
+      "whats-new-v2": [],
+      "using/engine-ask": []
+    },
+    "miners": {
+      "count": 2188,
+      "fields": [
+        "id",
+        "slug",
+        "kind",
+        "protocol",
+        "name",
+        "description",
+        "endpoints",
+        "input_schema",
+        "output_schema",
+        "signal_mapping",
+        "supported_intents",
+        "docs",
+        "limitations",
+        "base_url",
+        "wallet_address",
+        "fee_address",
+        "activation_status",
+        "min_price_usdc",
+        "yaml_url",
+        "registered_at",
+        "total_requests_served",
+        "scored",
+        "last_scored_epoch",
+        "last_scored_at",
+        "scores"
+      ],
+      "mentionsNetwork": []
+    },
+    "challenges": {
+      "7320": {
+        "networks": [
+          "eip155:84532",
+          "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+          "eip155:11155111"
+        ],
+        "schemes": [
+          "exact",
+          "escrow"
+        ],
+        "assets": [
+          "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+          "4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU"
+        ],
+        "payTo": [
+          "0xC0A3FB6d3F1f4B54617d29ffbdA4663Af5F96e2e",
+          "G53EbeTZSNsAn7bj6iMFUQnq3zpDdEbHhKkPRywo8bix",
+          "0x72a70e949362670bf8bcead24efc5b8f950aa08b"
+        ],
+        "amounts": [
+          "10000"
+        ],
+        "escrow": true,
+        "options": [
+          {
+            "scheme": "exact",
+            "network": "eip155:84532",
+            "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+            "payTo": "0xC0A3FB6d3F1f4B54617d29ffbdA4663Af5F96e2e",
+            "amount": "10000"
+          },
+          {
+            "scheme": "exact",
+            "network": "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+            "asset": "4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU",
+            "payTo": "G53EbeTZSNsAn7bj6iMFUQnq3zpDdEbHhKkPRywo8bix",
+            "amount": "10000"
+          },
+          {
+            "scheme": "escrow",
+            "network": "eip155:11155111",
+            "asset": null,
+            "payTo": "0x72a70e949362670bf8bcead24efc5b8f950aa08b",
+            "amount": "10000"
+          }
+        ]
+      },
+      "71083": {
+        "networks": [
+          "eip155:84532",
+          "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+          "eip155:11155111"
+        ],
+        "schemes": [
+          "exact",
+          "escrow"
+        ],
+        "assets": [
+          "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+          "4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU"
+        ],
+        "payTo": [
+          "0xC0A3FB6d3F1f4B54617d29ffbdA4663Af5F96e2e",
+          "G53EbeTZSNsAn7bj6iMFUQnq3zpDdEbHhKkPRywo8bix",
+          "0x72a70e949362670bf8bcead24efc5b8f950aa08b"
+        ],
+        "amounts": [
+          "10000"
+        ],
+        "escrow": true,
+        "options": [
+          {
+            "scheme": "exact",
+            "network": "eip155:84532",
+            "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+            "payTo": "0xC0A3FB6d3F1f4B54617d29ffbdA4663Af5F96e2e",
+            "amount": "10000"
+          },
+          {
+            "scheme": "exact",
+            "network": "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+            "asset": "4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU",
+            "payTo": "G53EbeTZSNsAn7bj6iMFUQnq3zpDdEbHhKkPRywo8bix",
+            "amount": "10000"
+          },
+          {
+            "scheme": "escrow",
+            "network": "eip155:11155111",
+            "asset": null,
+            "payTo": "0x72a70e949362670bf8bcead24efc5b8f950aa08b",
+            "amount": "10000"
+          }
+        ]
+      }
+    },
+    "other": {
+      "https://devnode.telegraphprotocol.com/": [],
+      "https://devnode.telegraphprotocol.com/engine/v1/intents/MINING_HASHPRICE_VERIFY_GENERAL": [
+        "Gas, balances, transactions, token supply and pinned-block reads come straight from public JSON-RPC on Ethereum, Base, Arbitrum, OP Mainnet, Polygon, BNB Chain, Avalanche, Linea, Scroll, Gnosis, zkSync Era, Blast, Mantle, Celo, Sonic and Unichain.",
+        "price\"]},{\"id\":\"74183\",\"name\":\"Bitcoin Coinbase-Proven Hashprice\",\"slug\":\"zk-hp-proof\",\"description\":\"Bitcoin single-block gross expected hashprice at an exact mainnet block height, in sats per PH/s per day."
+      ],
+      "https://telegraphprotocol.com/": [
+        "141,221 Transactions (testnet) 1,918 Miners 45 Apps 8 / 64 Nodes secured Jan 2027 Mainnet Join Hackathon · Win up to $15K Watch How Telegraph works in 3 minutes A short walkthrough of how Telegraph routes demand, grades competing intelligence and pr"
+      ]
+    },
+    "mainnetRpcChainId": 1,
+    "advertisedMainnet": false
+  }
+}

@@ -1,0 +1,126 @@
+// Network settings come from config/networks.json. Sepolia (testnet) is the only network that runs.
+// A non-testnet entry refuses to run unless it is enabled in the file, EVERY value is supplied explicitly, and the
+// environment carries an explicit acknowledgement. Nothing is defaulted or guessed.
+import { readFileSync } from "node:fs";
+import { fileURLToPath } from "node:url";
+
+export interface NetworkConfig {
+  label: string;
+  testnet: boolean;
+  enabled: boolean;
+  caip2: string | null;
+  chain_id: number | null;
+  rpc_url: string | null;
+  /** The allow-list: the only assets Hushrate pays, each with its own pinned payee. Empty means nothing may be paid. */
+  assets: { address: string | null; symbol?: string; name?: string; decimals: number; pay_to: string | null; mintable?: boolean; role?: string }[];
+  /** The escrow rail: the one Diamond that may be paid, and the token it is funded in. null disables the rail. */
+  escrow?: { diamond: string | null; token: string | null } | null;
+  telegraph_node: string | null;
+  expected_wallet: string | null;
+  explorer_tx: string | null;
+  /** A key-free public RPC the web app may call from the browser (the agent's rpc_url may carry a key and is never published). */
+  public_rpc_url?: string | null;
+  /** More key-free public RPCs, tried in order when the first has no record of an older transaction (public nodes prune old lookups). */
+  public_rpc_fallbacks?: string[];
+  max_amount_per_payment: string | null;
+  max_paid_calls_per_run: number | null;
+  min_balance_units: string | null;
+}
+
+/** One allowed payment asset with its exact payee. */
+export interface NetworkAsset { address: `0x${string}`; symbol: string; name: string; decimals: number; pay_to: `0x${string}`; mintable: boolean; role: string; }
+
+/** A fully validated network: no nulls left. */
+export interface Network {
+  name: string;
+  label: string;
+  testnet: boolean;
+  caip2: `${string}:${string}`;
+  chain_id: number;
+  rpc_url: string;
+  assets: NetworkAsset[];
+  escrow: { diamond: `0x${string}`; token: `0x${string}` } | null;
+  telegraph_node: string;
+  expected_wallet: `0x${string}`;
+  explorer_tx: string;
+  public_rpc_url: string | null;
+  max_amount_per_payment: string;
+  max_paid_calls_per_run: number;
+  min_balance_units: bigint;
+}
+
+/**
+ * The last gate before any signature. Called by the payment layer when it loads. A dry run (HUSHRATE_DRY_RUN set) never signs on any
+ * network; a non-testnet network signs only with the explicit acknowledgement. Throws with the NETWORK CONFIG prefix, which the agent
+ * treats as a real failure, never a degraded run.
+ */
+export function assertSigningAllowed(net: Pick<Network, "name" | "testnet">, env: Record<string, string | undefined>): void {
+  if (env.HUSHRATE_DRY_RUN) throw new Error(`${NETWORK_ERROR}: dry run: signing is disabled on every network (HUSHRATE_DRY_RUN is set); refusing to sign for "${net.name}"`);
+  if (!net.testnet && env[MAINNET_ACK_ENV] !== MAINNET_ACK_VALUE) throw new Error(`${NETWORK_ERROR}: refusing to sign on "${net.name}", which is not a testnet, without ${MAINNET_ACK_ENV}=${MAINNET_ACK_VALUE}`);
+}
+
+export const MAINNET_ACK_ENV = "HUSHRATE_MAINNET_ENABLE";
+export const MAINNET_ACK_VALUE = "I_UNDERSTAND_THIS_USES_REAL_MONEY";
+const ADDRESS = /^0x[0-9a-fA-F]{40}$/;
+
+/** Prefix is matched by the agent's fatal-error check: a refused network is a real failure, never a degraded run. */
+export const NETWORK_ERROR = "NETWORK CONFIG";
+
+export interface ResolveOptions {
+  /** Validate a network WITHOUT enabling it: skips the enabled switch and the mainnet acknowledgement, still demands every value. Only the dry run uses it; nothing resolved this way may sign (see assertSigningAllowed). */
+  dryRun?: boolean;
+}
+
+export function resolveNetwork(cfg: { active: string; networks: Record<string, NetworkConfig> }, env: Record<string, string | undefined>, opts: ResolveOptions = {}): Network {
+  const name = cfg.active;
+  const n = cfg.networks[name];
+  if (!n) throw new Error(`${NETWORK_ERROR}: active network "${name}" is not defined`);
+  if (!n.enabled && !opts.dryRun) throw new Error(`${NETWORK_ERROR}: network "${name}" is disabled (enabled: false); refusing to run`);
+
+  const missing: string[] = [];
+  const need = (k: string, v: unknown) => { if (v === null || v === undefined || v === "") missing.push(k); };
+  need("caip2", n.caip2); need("chain_id", n.chain_id); need("rpc_url", n.rpc_url); if (!Array.isArray(n.assets) || n.assets.length === 0) missing.push("assets (the allow-list is empty)");
+  need("telegraph_node", n.telegraph_node); need("expected_wallet", n.expected_wallet); need("explorer_tx", n.explorer_tx);
+  need("max_amount_per_payment", n.max_amount_per_payment); need("max_paid_calls_per_run", n.max_paid_calls_per_run); need("min_balance_units", n.min_balance_units);
+  if (missing.length) throw new Error(`${NETWORK_ERROR}: network "${name}" is missing ${missing.join(", ")}; refusing to run (nothing is defaulted)`);
+
+  const seen = new Set<string>();
+  for (const [i, a] of n.assets.entries()) {
+    if (!a.address || !ADDRESS.test(a.address)) throw new Error(`${NETWORK_ERROR}: assets[${i}].address is not a valid address`);
+    if (!a.pay_to || !ADDRESS.test(a.pay_to)) throw new Error(`${NETWORK_ERROR}: assets[${i}].pay_to is not a valid address`);
+    if (!Number.isInteger(a.decimals) || a.decimals < 0 || a.decimals > 36) throw new Error(`${NETWORK_ERROR}: assets[${i}].decimals is invalid`);
+    if (seen.has(a.address.toLowerCase())) throw new Error(`${NETWORK_ERROR}: asset ${a.address} is listed twice`);
+    seen.add(a.address.toLowerCase());
+  }
+  if (n.escrow) {
+    if (!n.escrow.diamond || !ADDRESS.test(n.escrow.diamond)) throw new Error(`${NETWORK_ERROR}: escrow.diamond is not a valid address`);
+    if (!n.escrow.token || !ADDRESS.test(n.escrow.token)) throw new Error(`${NETWORK_ERROR}: escrow.token is not a valid address`);
+  }
+  if (!ADDRESS.test(n.expected_wallet!)) throw new Error(`${NETWORK_ERROR}: expected_wallet is not a valid address`);
+  if (n.caip2 !== `eip155:${n.chain_id}`) throw new Error(`${NETWORK_ERROR}: caip2 ${n.caip2} does not match chain_id ${n.chain_id}`);
+  if (!/^\d+$/.test(n.max_amount_per_payment!) || BigInt(n.max_amount_per_payment!) <= 0n) throw new Error(`${NETWORK_ERROR}: max_amount_per_payment must be a positive integer string`);
+
+  if (!n.testnet && !opts.dryRun && env[MAINNET_ACK_ENV] !== MAINNET_ACK_VALUE) {
+    throw new Error(`${NETWORK_ERROR}: "${name}" is not a testnet. It refuses to run unless ${MAINNET_ACK_ENV}=${MAINNET_ACK_VALUE} is set. Hushrate is NOT live on mainnet.`);
+  }
+
+  return {
+    name, label: n.label, testnet: n.testnet, caip2: n.caip2 as `${string}:${string}`, chain_id: n.chain_id!, rpc_url: n.rpc_url!,
+    assets: n.assets.map((a) => ({ address: a.address as `0x${string}`, symbol: a.symbol ?? "USDC", name: a.name ?? a.symbol ?? "USDC", decimals: a.decimals, pay_to: a.pay_to as `0x${string}`, mintable: a.mintable === true, role: a.role ?? "allowed" })), telegraph_node: n.telegraph_node!.replace(/\/$/, ""),
+    escrow: n.escrow ? { diamond: n.escrow.diamond as `0x${string}`, token: n.escrow.token as `0x${string}` } : null,
+    expected_wallet: n.expected_wallet as `0x${string}`, explorer_tx: n.explorer_tx!, public_rpc_url: n.public_rpc_url ?? null, max_amount_per_payment: n.max_amount_per_payment!,
+    max_paid_calls_per_run: n.max_paid_calls_per_run!, min_balance_units: BigInt(n.min_balance_units!),
+  };
+}
+
+let cached: Network | null = null;
+/** The active network from config/networks.json. TELEGRAPH_NODE in the environment may override the node URL. */
+export function loadNetwork(): Network {
+  if (cached) return cached;
+  const root = fileURLToPath(new URL("../../", import.meta.url));
+  const cfg = JSON.parse(readFileSync(`${root}config/networks.json`, "utf8"));
+  const net = resolveNetwork(cfg, process.env);
+  const override = process.env.TELEGRAPH_NODE;
+  cached = override ? { ...net, telegraph_node: override.replace(/\/$/, "") } : net;
+  return cached;
+}

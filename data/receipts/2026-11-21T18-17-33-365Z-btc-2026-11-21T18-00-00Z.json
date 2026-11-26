@@ -1,0 +1,67 @@
+{
+  "label": "btc-2026-11-21T18-00-00Z",
+  "miner_id_requested": "7320",
+  "intent": "CRYPTO_PRICE_USD",
+  "params": {
+    "symbol": "BTC"
+  },
+  "query": null,
+  "idempotency_key": "[\"7320\",\"CRYPTO_PRICE_USD\",{\"symbol\":\"BTC\"},null,\"@2026-11-21T18:00:00Z\"]",
+  "paid": true,
+  "http_status": 200,
+  "rail": "escrow",
+  "payment": {
+    "rail": "escrow",
+    "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+    "network": "eip155:11155111",
+    "pay_to": "0x72a70e949362670Bf8bceAd24eFC5b8f950aa08b"
+  },
+  "escrow_request": {
+    "from": "0x3f857679462c80cc4ffe99635aa3bd6e44fc913e",
+    "to": "0x72a70e949362670bf8bcead24efc5b8f950aa08b",
+    "value": "10000",
+    "validAfter": "1795285047",
+    "validBefore": "1795285137",
+    "nonce": "fe32e9f5-c847-47eb-955e-d55b34d700be"
+  },
+  "escrow_available_before_uusdc": "6670000",
+  "escrow_receipt": {
+    "receipt_hash": "0x1fa1cbcf5d33bb5e39d8d8dfe68e74325f94c0e56d0f295293b39ea82c679131",
+    "rail": "escrow",
+    "payer": "0x3f857679462c80cc4ffe99635aa3bd6e44fc913e",
+    "miner": "5406",
+    "intent": "CRYPTO_PRICE_USD",
+    "amount_uusdc": "10000",
+    "epoch_id": 32,
+    "settlement": "epoch",
+    "chain": "telegraph",
+    "timestamp": 1795285053
+  },
+  "escrow_receipt_matches": true,
+  "payment_response": null,
+  "telegraph_receipt": null,
+  "response": {
+    "miner_id": "7320",
+    "miner_name": "FinWire Crypto Price",
+    "endpoint": "/price",
+    "result": {
+      "price_usd": 60033.8
+    },
+    "result_shape": "intent",
+    "format_version": 1,
+    "field_status": {
+      "price_usd": "ok"
+    },
+    "input": {
+      "symbol": "BTC"
+    },
+    "input_schema_version": 3,
+    "cost_usd": 0.01,
+    "duration_ms": 122,
+    "timestamp": "2026-11-21T18:17:32.476588331Z",
+    "reasoning": "Intent: miner finwire-crypto-price given by the caller\nMiner: The endpoint /price is described as serving the CRYPTO_PRICE_USD intent and accepts a 'symbol' query parameter. The provided parameters include 'symbol' with the value 'BTC', which directly maps to this endpoint's requirements.",
+    "intent": "CRYPTO_PRICE_USD",
+    "intent_version": 1,
+    "signal_hash": "0xb39062a1144e50a8598f3fdc64e558c7ee5c24d5998af39aae2153b1a124b580"
+  }
+}

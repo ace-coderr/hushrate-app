@@ -1,0 +1,29 @@
+{
+  "name": "@hushrate/agent",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "probe": "tsx src/probe.ts",
+    "wallet": "tsx src/wallet.ts",
+    "agent": "tsx src/agent.ts",
+    "retest": "tsx src/retest.ts",
+    "mint": "tsx src/mint.ts",
+    "typecheck": "tsc --noEmit",
+    "ledger": "tsx src/ledger.ts",
+    "billing": "tsx src/billing.ts",
+    "dryrun": "tsx src/dryrun.ts",
+    "test": "tsx --test src/*.test.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "@x402/evm": "^2.30.0",
+    "@x402/fetch": "^2.30.0",
+    "viem": "^2.57.19",
+    "@hushrate/core": "*"
+  }
+}

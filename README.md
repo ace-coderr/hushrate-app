@@ -1,0 +1,226 @@
+# Hushrate
+
+Run-or-curtail decisions for bitcoin mining sites, with a receipt for every purchase.
+
+> **Agent paused: automation is off while GitHub reviews the original repository. Last run: 2026-11-23 14:17 UTC.**
+> This repository is a read-only snapshot. Nothing runs on a schedule and nothing new is being bought. The tapes, receipts and billing proofs below are what was recorded up to that time. See [docs/status.md](docs/status.md).
+
+Hushrate buys real market data from the [Telegraph](https://anjoman.ai/docs/introduction) network over x402 (Ethereum Sepolia, test USDC, $0.01 per request): a hashprice reading and the BTC/USD price on each run (hourly while it was running). It checks each purchase against a public source, records a **market tape** for the hour, and lets each operator decide RUN, CURTAIL or HOLD for their own sites in the browser. Entry for Telegraph Hackathon Season II, Apps & Agents, Mission 12 (Mining and Power).
+
+- Site (static snapshot): https://ace-coderr.github.io/hushrate-app/
+- **Testnet only.** No mainnet, no real money.
+- Nothing is mocked. Where an input is missing the answer is HOLD, never a guess.
+
+## How it works
+
+```
+One agent run (paused in this snapshot)
+  agent  ── mempool.space ──▶ latest block's hashprice, BTC/USD (public references)
+         ── Telegraph (x402) ▶ hashprice (miner 71083) and BTC/USD (miner 7320), $0.01 test USDC each
+         ── CAISO OASIS ─────▶ day-ahead and real-time LMP per node (public)
+         └─▶ data/market/<time>.json, latest.json, history.json, ledger.json, status.json
+  web    ── reads data/*.json ─▶ decisions computed in the browser with @hushrate/core
+  mcp    ── reads data/*.json ─▶ hushrate_market, hushrate_decide, hushrate_receipts
+```
+
+Rules the agent follows each run:
+
+1. Compute the public hashprice of the latest block (its reward including fees, at its own difficulty) and read BTC/USD from mempool.space. The 144-block mean is kept on the tape as context only.
+2. Buy the hashprice from Telegraph miner 71083 (fallback: 1900999013, tried only if the primary signed no payment). Accept it only if `hashprice_sats_per_ph_day`, `block_height` and `hashrate_eh_s` are `ok`, the returned height equals the requested tip, and the value is within **1%** of the public hashprice of **that same block**, recomputed by the agent. Otherwise use the public single-block value and label why on the tape. See Data acceptance below.
+3. Buy the BTC/USD price from Telegraph miner 7320 (`CRYPTO_PRICE_USD`, `symbol=BTC`). Accept it only if the call succeeded, `price_usd` is `ok`, and it is within **0.5%** of the live mempool.space price; otherwise use the public price and label why on the tape. The accepted price is the one decisions use, so the paid data really feeds the decision. If mempool.space is unreachable there is nothing to verify against, so nothing is bought.
+4. Fetch CAISO day-ahead and latest real-time (5-minute) prices for each configured node. Decisions use real-time when available, day-ahead otherwise, and the label says which.
+5. Write the tape. The tape contains **market data only**; sites and decisions never leave the user's browser.
+
+`@hushrate/core` (`packages/core`) holds the decision math, the 144-block hashprice and the tape types, and is used by the agent, the web app and the MCP server, with hand-computed tests.
+
+## Pages
+
+Landing, Desk (live market, 24-hour dispatch tape, per-site decisions with breakeven bars), Sites (your own sites in local storage, validated, JSON import/export), What-if (sliders for price, hashprice and efficiency), Receipts (ledger of paid requests with Sepolia explorer links, and data cost against loss avoided), Proof (re-verify in your browser: recompute 144 blocks, apply the acceptance rule, check the payment on Sepolia through a public RPC), Docs, Settings.
+
+The default fleet is a **sample fleet of demo assumptions**, labelled as such in the app. There are no customers and no adoption numbers anywhere.
+
+## Cost
+
+| | |
+|---|---|
+| Price per Telegraph request | $0.01 (10000 units of whichever allowed test USDC the node asks for, 6 decimals) |
+| Cap per payment | 30000 units ($0.03) |
+| Paid calls per run | 2 planned (hashprice + BTC price), hard cap 3 |
+| Per run | $0.02 |
+| Per day (24 runs) | $0.48 |
+| To 1 Dec (19 days) | $9.12 |
+| Per extra site | $0.00 (one tape serves every site) |
+| Escrow deposit | 8.00 USDC, once (2026-11-18), covers about 16 days at $0.48/day; topped up with `scripts/fund-escrow.ts` (at most 8 USDC per run) |
+| Rail | escrow first, then exact (settlement), then labelled public values; same $0.01 per call on each |
+
+The agent never retries after a payment settled, buys each intent at most once per UTC hour (a per-intent same-hour guard: a run that already paid for hashprice buys only the missing BTC price, and an hour that paid for both is a no-op), skips an identical request it already paid for, and pauses (writes `data/status.json`, buys nothing) if the test-USDC balance is below 0.20. A request that settles and then fails upstream is credited back to escrow by the node and shows in the ledger as billed $0.
+
+## Frontier check
+
+The Proof page compares what a frontier chat assistant answered (two manual samples, one with web search and one without, around the 16:00 UTC tape of 2026-11-22) with the value Hushrate bought from Telegraph and the public value for that hour. It is not a benchmark: two samples, results vary by model and time. The pasted answers, the tape they are compared with and the arithmetic are in `data/frontier-check.json` (generated by `scripts/frontier-check.mts`); to reproduce, ask the same questions with and without search and compare with a recorded hour. See Docs, "Why paid, verifiable data".
+
+## Data acceptance
+
+Measured on every recorded Telegraph hashprice purchase (miner 71083), from `data/market/`, with the public value recomputed from block data. The full table and method are in [docs/hashprice-drift.md](docs/hashprice-drift.md).
+
+| Period | Purchases | Accepted by the rule in force until 2026-11-14 (within 1% of the public 144-block mean) | Within 1% of the public value of the block the miner returned |
+|---|---|---|---|
+| 2026-11-12 16:10 to 2026-11-14 07:17 UTC | 38 | 29 of 38 (76.3%) | 38 of 38 (100%) |
+| Last 24 hours (2026-11-13 07:17 to 2026-11-14 07:17 UTC) | 26 | 17 of 26 (65.4%) | 26 of 26 (100%) |
+
+- **What the diagnosis found.** The miner computes the hashprice of one block, the latest, and matches the public value of that block exactly (median difference 0.00% over 38 purchases). The old rule compared it with a 144-block mean. After the difficulty adjustment at block 975744 (-9.13%) that mean mixed two difficulty regimes and sat about 9% low for a day, so three accurate purchases were rejected; the other six rejections were single-block fee noise of 1.05% to 1.78%. Nothing was wrong with the miner's data.
+- **The fix.** From 2026-11-14 the value is checked against the public hashprice of the same block, with the same required fields, the same stale-height check and the **same 1% limit**. The right-hand column is that rule applied to the recorded data (a replay, not a new live measurement). The live rate will be reported here once more hours have run under the new rule.
+- **The fallback.** If the Telegraph value is unavailable or fails the check, the agent uses the public single-block value of the latest block, the same definition, and the tape says why. A second miner (1900999013) is tried only if the first signed no payment, so hashprice is never bought twice in an hour.
+- **Old tapes** keep the rule they were recorded under, and the Proof page re-applies that rule to them.
+- **A separate finding.** Two hourly runs on 2026-11-13 at 16:17 and 16:20 UTC both bought data for the same hour (four payments, $0.04); the cause and fix are in the diagnosis section of the drift document.
+
+## Payment rails: escrow first
+
+Telegraph accepts payment two ways on the same `/engine/v1/ask` endpoints. Hushrate tries them in this order and records which one paid:
+
+1. **Escrow.** Fund Telegraph's escrow once (`scripts/fund-escrow.ts`: `approve` the Diamond, then `LedgerFacet.depositUSDC`), and each call is authorised by an EIP-191 `personal_sign` over the message template in the 402 challenge, sent in the `X-PAYMENT` header. No facilitator and no per-request on-chain transaction. A served call returns `X-PAYMENT-RESPONSE` with a `receipt_hash`, an `epoch_id` and `settlement: epoch`.
+2. **Exact (settlement)**, the earlier rail, only if escrow cannot pay and the wallet can.
+3. **Labelled public values**, if neither can.
+
+**Escrow receipts have a receipt hash and a billing record, not a per-call transaction hash.** That is how the rail works: the node charges every call in its epoch ledger root, one on-chain transaction per epoch. Proof is therefore two things: the on-chain deposit that funds the escrow (`data/deposits.json`, linked on Receipts and checkable on Proof), and, for each call, the node's delivery record for the epoch (`GET /v1/blocks/{epochId}/deliveries/{receiptHash}`), which `npm run billing` checks after a run and records in `data/billing.json` as `billing_verified` true, false or still pending (the node answers 404 until the epoch's block is recorded, up to about an hour). Nothing is marked verified without a real answer naming this wallet as the payer.
+
+Rules the escrow rail enforces before it signs anything: the network is exactly `eip155:11155111`; the payee is exactly the Telegraph Diamond `0x72a70e949362670Bf8bceAd24eFC5b8f950aa08b` (in the challenge and in the message); the message names the endpoint being called; the message amount equals the 402 amount and is at most 30000 (3 cents); the lower-case wallet and a fresh random nonce are used for every attempt; the validity window is 90 seconds (the node allows at most 2 minutes). If the escrow balance is too low the agent falls back to exact, and if the balance cannot be read it does **not** fall back to settlement. A request the node refuses is not billed; the agent never retries it in the same run. The 3-call per-run cap counts escrow and exact attempts together, and the same-hour per-intent guard blocks a second purchase of an intent in an hour under either rail.
+
+**Why escrow and not the API-key path.** On 23 Nov 2026 a member of the Telegraph team said in the hackathon Discord that the ask and direct-ask endpoints return receipts (the agent chat endpoint does not). Telegraph's inference-paths documentation says every paid call returns a `signal_hash` that commits to the request and the response, retrievable at `/engine/v1/signal/{hash}`. The documentation does not describe what an API-key call returns, or whether the node's billing record names the payer for it. Hushrate stays on the escrow rail because its receipts are checked against the node's delivery record naming this wallet as the payer, and it has not tested the API-key path.
+
+**Incident, dated.** Since 17 Nov 20:17 UTC paid purchases failed at Telegraph's settlement step (`facilitator.x402.rs/settle` timed out; HTTP 402 after Hushrate had signed; nothing moved). Telegraph confirmed the integration was still valid and pointed to its escrow rail. On 18 Nov 20:23 UTC the wallet deposited 8 USDC (approve `0x049cce73…4496`, deposit `0xfe542fb2…9a4d`, both on Sepolia) and Hushrate moved to escrow. Details and the free checks run before funding: [docs/escrow-rail.md](docs/escrow-rail.md).
+
+## Network and payment asset
+
+Telegraph changed the payment asset it asks for on 2026-11-17 and may change it again, so Hushrate does not hard-code one asset. It pays from an **explicit allow-list of two Sepolia assets**, each with a pinned payee (today the same one), and pays whichever of the two the node's 402 challenge asks for:
+
+| | Asset | Payee (pinned) | Status |
+|---|---|---|---|
+| Circle test USDC | `0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238` (6 decimals) | `0x72a70e949362670Bf8bceAd24eFC5b8f950aa08b` | asked for since 2026-11-17 |
+| Previous test USDC | `0xcc194e1a843B658526D0D5C431f670028582Ae17` (6 decimals) | `0x72a70e949362670Bf8bceAd24eFC5b8f950aa08b` | asked for until 07:00 UTC and again from about 16:00 UTC on 2026-11-17, now to the new payee |
+
+Network `eip155:11155111` (Ethereum Sepolia, testnet). Per-payment cap 30000 units (3 cents); paid calls per run: 2 planned, hard cap 3. The terms are in `config/networks.json`; the payment client enforces them with spend controls plus a policy that requires the exact (network, asset, payee) triple, and never uses `allowedAssets: true` or `spendControls: false`.
+
+- **Before any miner is called**, the agent reads the node's payment terms for free (a request without payment returns the 402 challenge). If the node asks for anything off the allow-list (another asset, the right asset to a different payee, another network), nothing is called and the degraded reason names the asset and network it asked for. If the asked-for asset is allowed, the agent checks the wallet's balance **of that asset**; if it is below the cost of the run it records `unfunded for USDC 0x…` and labelled public values, and again calls no miner.
+- **Balances** of both assets are read every run and shown in `data/status.json` and on the Settings page. Every new tape, receipt and ledger row records the asset it was paid in; older ones have none recorded and are read as the previous asset.
+- **Funding.** Circle's token: https://faucet.circle.com/ (network **Ethereum Sepolia**, token **USDC**), to the wallet address in `config/networks.json`; Hushrate cannot mint it. The previous token can still be minted with `npm run mint -w agent -- --confirm` (dry run without the flag). Only the asset the node currently asks for is useful; check with `npm run wallet`.
+
+**What happened on 2026-11-17.** The node switched to Circle's token and a new payee. From the 07:17 UTC run every paid call was refused by Hushrate's own spend controls (nothing was signed, nothing was lost), and 7 hourly tapes (07:00 to 13:00 UTC) used labelled public values. The failure reason did not name the asset, and nothing flagged the run of public-only hours; both are fixed (specific refusal reasons, a funding check per asset, a "Paid data paused" banner). After the wallet was funded, the first run signed both payments and the node verified them, but its facilitator timed out while settling (HTTP 402, nothing moved); that is recorded as unsettled, not as a purchase. Full record: [docs/payment-asset-change.md](docs/payment-asset-change.md).
+
+## Failure handling
+
+The agent exits non-zero only for real failures: a missing or wrong wallet key, unreadable config, a failed file write, or an unexpected bug (it also writes `status: error`). A failed upstream source (mempool.space, CAISO OASIS, Telegraph, the Sepolia RPC) is a **degraded run**: the run still finishes with exit code 0, the failure is listed in the tape's `degraded` field and in `data/status.json` (`state: degraded`), it is printed as a warning, and the affected inputs are left empty so sites that need them decide HOLD. Specifics:
+
+- mempool.space down: no hashprice or BTC price on the tape, and no Telegraph purchase (there is nothing to verify it against, so no money is spent).
+- CAISO down for a node: that node has no price and decides HOLD.
+- Telegraph call fails: the public hashprice is used and the tape says why.
+- Sepolia RPC down: the balance cannot be proven, so no paid call is made.
+- A degraded rerun never overwrites a more complete tape already recorded for the same hour (every run is still kept under `data/market/`).
+- Wallet unfunded for the asset the node asks for (balance of that asset below the cost of the run, 0.02): no miner is called, the run records `unfunded for USDC 0x…` as a degraded event and labelled public values (exit code 0). Below 0.20 but enough to pay is only a note.
+- Escrow balance below the cost of the run: the agent uses the exact rail if the wallet can pay that way, otherwise labelled public values. Escrow balance unreadable: no payment of any kind (never a fallback to settlement without knowing the balance). Escrow terms off the pins (another payee, network, endpoint or amount, or an amount above 3 cents): refused with the reason named.
+- Settlement timeouts at the facilitator (exact rail): the call is recorded as signed but unsettled, never as a purchase, and the next run tries again.
+- Payment terms off the allow-list (an unknown asset, a known asset to a different payee, another network): the degraded reason names the asset and network the node asked for, and no miner is called.
+
+The Settings page shows the state, the last successful run (a degraded run counts) and the degraded reasons.
+
+## Limits
+
+- **Testnet.** Sepolia test USDC only.
+- **Settlement outage and move to escrow (updated 19 Nov 07:30 UTC).** Since 17 Nov 20:17 UTC every paid purchase failed at Telegraph's settlement step: the node accepted the signed payment, then its call to the facilitator (facilitator.x402.rs/settle) timed out and it answered HTTP 402. The tapes for those hours are public-only and labelled that way, and no funds moved: the wallet balances did not change and a failed payment is not counted as a purchase. The last hour that bought paid data was 06:00 UTC on 17 Nov (07:00 to 19:00 UTC that day failed for the payment-asset reasons in the next item). On 18 Nov at 20:23 UTC the wallet funded Telegraph's escrow with 8 USDC in one deposit, and the agent now pays from escrow first (no facilitator, no per-call transaction), then by settlement, then falls back to labelled public values. It recovered: the 21:00 UTC tape on 18 Nov (run at 21:17 UTC) was the first hour that bought again, and each following run bought both intents through escrow (22 paid calls through the 07:00 UTC tape on 19 Nov, 18 of them already verified against the node's billing record and the rest waiting for their epoch to be recorded). Escrow balance after that run: 7.78 USDC available.
+- **The payment asset can change under us.** It did on 2026-11-17 (see Network and payment asset). Hushrate pays two allow-listed assets; a third, or a new payee, stops paid data until the config is updated, and the data falls back to labelled public values meanwhile. Funding is manual (a faucet), and the wallet must hold the asset the node currently asks for.
+- **Sample fleet.** Default sites are demo assumptions. Decisions are only as good as your load, efficiency and power adder.
+- **Day-ahead versus real-time.** Real-time moves every five minutes. Hushrate uses the latest published interval, not a forecast.
+- **Hashprice is one block.** The value used (Telegraph's, or the public fallback) is the hashprice of the latest block, so it includes that block's fees and moves with them (within 1.78% of the 144-block mean in the recorded data when no difficulty adjustment was in the window). The tape keeps the 144-block mean beside it for context.
+- **One pinned miner per paid intent.** Hashprice (71083) and BTC price (7320) each come from one miner, chosen from a small probe ([docs/probe-report.md](docs/probe-report.md), round 4). If it fails the public value is used and labelled.
+- **Old tapes** recorded before the BTC purchase have no `btc` block: they carry the public mempool.space price, and the app labels them that way.
+- **Telegraph power price is not used.** `GRID_POWER_PRICE_GENERAL` was tested in params and query mode: miner 302 returned about 42.7 for SP15 while CAISO showed 13.27, and the CAISO-specific miners refuse the standard params. CAISO OASIS supplies power prices. Details and raw outputs are in [docs/probe-report.md](docs/probe-report.md).
+- **Telemetry and SLA intents are not used.** They need a facility or service identifier the product does not have. See the probe report.
+- **Three nodes.** The tape covers `TH_SP15_GEN-APND`, `TH_NP15_GEN-APND`, `TH_ZP26_GEN-APND`. Other nodes decide HOLD.
+- **It reports, it does not switch hardware**, and it ignores ramp, restart and contract costs. Not financial advice.
+
+## Navigation
+
+One navigation bar with two modes. On the landing page it shows Product, Desk, Proof, Docs, the theme toggle and the "Open the desk" button. On every app page it becomes a single bar of the app tabs (Desk, Sites, What-if, Receipts, Proof, Docs, Settings) and the theme toggle, with nothing repeated and no call-to-action button; on a phone the tabs scroll horizontally. The focus ring appears for keyboard focus only. The footer is a grid (brand and testnet note, then Product, Verify and Project link columns, a divider, and a bottom line with the testnet note) that stacks into a single column at 375px.
+
+## Path to mainnet (not live)
+
+**Hushrate is NOT live on mainnet.** Network settings are in `config/networks.json`: Sepolia is active, and the mainnet entry is disabled with every value null, because Telegraph's docs publish testnet addresses only and nothing was invented. A non-testnet network refuses to run unless it is enabled, every value is supplied explicitly and `HUSHRATE_MAINNET_ENABLE=I_UNDERSTAND_THIS_USES_REAL_MONEY` is set. The checklist (Telegraph's mainnet addresses, a real USDC budget and caps, key custody, alerts, what must be re-verified) is in [docs/mainnet.md](docs/mainnet.md).
+
+Mainnet readiness, as evidence and not as a claim: `docs/mainnet-probe.md` records what Telegraph advertises for mainnet today (free calls, with timestamps: nothing); `npm run dryrun -- --network mainnet` validates a network's live payment terms against every pin and cap, builds the unsigned request and stops before signing (no key, never signs; its last result is `data/mainnet-dryrun.json`, today `not_configured`). It is run by hand. `docs/mainnet.md` lists what differs between Sepolia and mainnet, the cost and risk table (about $0.02 per run, $0.48 per day, $14.40 per 30 days; caps of 3 cents per payment and 3 calls per run), the kill switch, and what is not proven. Hushrate has not run on mainnet. Status as of 23 Nov 2026: a member of the Telegraph team replied in the hackathon Discord channel that mainnet is expected in "Dec-Jan, hopefully" (not confirmed, no date), after the probe and without giving a node, asset, payee or rail, so Hushrate stays on testnet for this submission.
+
+## Run it yourself
+
+Node 20 or newer.
+
+```bash
+git clone https://github.com/ace-coderr/hushrate-app.git
+cd hushrate-app
+npm install
+cp .env.example .env           # set EVM_PRIVATE_KEY to a Sepolia TEST wallet
+npm run wallet                 # test ETH and test USDC balances (read-only)
+npm run agent -- --no-pay --dry   # free: print a tape from public sources only
+npm run agent                  # pays for two readings (about 0.02 test USDC) and writes data/
+npm run billing                # later: checks the node's billing record for each escrow receipt (free)
+npm run dev -w web             # local web app (serves ../data at /data)
+```
+
+Other scripts: `npm run probe` (free discovery), `npx tsx agent/src/btc-probe.ts <minerId>...` (BTC price miner probe, up to 3 paid calls), `MEMPOOL_BASE=<mirror> npx tsx agent/src/hashprice-probe.ts <minerId>...` (hashprice miner probe, up to 5 paid calls and $0.06, each answer compared with the public value at the height it returned), `npx tsx scripts/hashprice-drift.mts` (free; regenerates docs/hashprice-drift.md from the recorded tapes), `npm run retest -w agent` (power-price retest, up to 3 paid calls), `npm run ledger -w agent`, and `npm run mint -w agent` (dry run unless `--confirm`; mints Sepolia test USDC via `mint(address,uint256)`).
+
+## Reproduce the build and checks
+
+```bash
+npm test               # core and MCP tests (hand-computed)
+npm run typecheck
+npm run build -w web   # static site in web/dist (served under /hushrate-app/; set VITE_BASE to change it)
+npm run build -w packages/mcp
+```
+
+To reproduce the proof by hand, open the Proof page, or recompute `reward * 1e15 * 86400 / (difficulty * 2^32)` for the block at `returned_height` in `data/latest.json` (the quantity the Telegraph miner computes), and its mean over the 144 blocks ending at `block_height` for context, and look up any `tx_hash` from `data/ledger.json` on Sepolia.
+
+## Running the agent (paused in this snapshot)
+
+Nothing in this repository runs by itself: there are no workflows and no scheduled jobs.
+
+**One run, locally.** Follow "Run it yourself" above, with a Sepolia **test** wallet's key in `.env` (never commit it). To pay through escrow, fund Telegraph's escrow once: `npx tsx scripts/fund-escrow.ts` prints the plan and sends nothing; `--execute` approves and deposits (at most 8 USDC per run of the script). The script is pinned to the expected wallet, the Sepolia Diamond and the test token in code and config, so change those deliberately if you use your own wallet. Then `npm run agent`.
+
+**Cost.** About **0.02 test USDC per run** on the Sepolia escrow rail (two calls at $0.01), so about 0.48 per day if run hourly. Sepolia test funds only; no real money.
+
+**Limits the agent enforces.** At most 3 cents per payment; at most 3 paid calls per run; a same-hour guard per intent, so two runs in one UTC hour never buy the same thing twice; only the pinned network, payee and amount are signed; an unreadable escrow balance never leads to a payment.
+
+**Turning the hourly run back on.** See [docs/running-the-agent.md](docs/running-the-agent.md), which describes how the run was triggered before the pause and what to do to schedule it again.
+
+## MCP server
+
+Reads the published JSON, so it needs no key and no wallet.
+
+```bash
+npm install
+npm run build -w packages/mcp
+```
+
+Add to your MCP client (for example `claude_desktop_config.json`) with the real absolute path:
+
+```json
+{
+  "mcpServers": {
+    "hushrate": { "command": "node", "args": ["/absolute/path/to/hushrate-app/packages/mcp/dist/index.js"] }
+  }
+}
+```
+
+Tools: `hushrate_market` (latest tape), `hushrate_decide` (site parameters in, decision and breakeven out), `hushrate_receipts` (ledger of paid requests). Set `HUSHRATE_DATA_URL` to read a different copy of `data/`.
+
+## Repository layout
+
+- `agent/` Node + TypeScript: agent, CAISO client, x402 client with spend guards, ledger, probe, retest, mint
+- `packages/core/` shared decision math, hashprice, tape types
+- `packages/mcp/` MCP server
+- `web/` React + Vite app
+- `config/agent.json` nodes, pinned miners, tolerances
+- `config/networks.json` network settings (Sepolia active, mainnet disabled)
+- `data/` published tape (`market/`, `latest.json`, `history.json`, `ledger.json`, `status.json`), `receipts/` (decoded payment and Telegraph receipts), `discovery/` and `probe/` (raw research output), `verification/`
+- `docs/probe-report.md` what Telegraph returned, with verdicts
+- `docs/hashprice-drift.md` why 71083 was rejected so often, how it was diagnosed, and what changed (regenerate with `npx tsx scripts/hashprice-drift.mts`)
+- `docs/mainnet.md` the path to mainnet and its checklist
+- `docs/status.md` why this repository is a snapshot and the agent is paused
+- `docs/running-the-agent.md` how runs were scheduled before, and how to turn them back on

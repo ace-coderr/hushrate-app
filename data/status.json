@@ -1,0 +1,50 @@
+{
+  "state": "paused",
+  "reason": "Agent paused: automation is off while GitHub reviews the original repository. Last run: 2026-11-23 14:17 UTC.",
+  "agent_paused": {
+    "message": "Agent paused: automation is off while GitHub reviews the original repository.",
+    "last_run": "2026-11-23T14:17:24.504Z",
+    "automation": "off"
+  },
+  "updated_at": "2026-11-23T14:18:11.182Z",
+  "last_success_at": "2026-11-23T14:18:11.182Z",
+  "usdc_balance": "5.78",
+  "balances": [
+    {
+      "asset": "0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238",
+      "symbol": "USDC",
+      "role": "current",
+      "balance": "20"
+    },
+    {
+      "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+      "symbol": "USDC",
+      "role": "previous",
+      "balance": "5.78"
+    }
+  ],
+  "rail": "escrow",
+  "rail_reason": "escrow funded: 5820000 uUSDC available",
+  "escrow": {
+    "diamond": "0x72a70e949362670Bf8bceAd24eFC5b8f950aa08b",
+    "token": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+    "read_at": "2026-11-23T14:18:11.182Z",
+    "available_usdc": "5.80",
+    "deposited_usdc": "8.00",
+    "balance_usdc": "5.82",
+    "unbilled_usdc": "0.02"
+  },
+  "payment_asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+  "payment_network": "eip155:11155111",
+  "allowed_assets": [
+    "0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238",
+    "0xcc194e1a843B658526D0D5C431f670028582Ae17"
+  ],
+  "unfunded": false,
+  "unfunded_asset": null,
+  "last_tape": "data/market/2026-11-23T14-17-24Z.json",
+  "paid_calls_last_run": 2,
+  "cost_usd_last_run": 0.02,
+  "hashprice_source": "telegraph",
+  "btc_source": "public"
+}

@@ -1,0 +1,126 @@
+{
+  "schema": 1,
+  "interval_start": "2026-11-23T14:00:00Z",
+  "recorded_at": "2026-11-23T14:17:24.504Z",
+  "block_height": 977215,
+  "btc_usd": 62812,
+  "hashprice": {
+    "value_sats_per_ph_day": 46722.500822,
+    "source": "telegraph",
+    "label": "Telegraph miner 71083: equals the public single-block value at block 977215 within 1% (0.000% apart)",
+    "public_144": {
+      "tip": 977215,
+      "blocks": 144,
+      "from_height": 977072,
+      "to_height": 977215,
+      "hashprice_sats_per_ph_day": 46861.49989425251,
+      "min_block": 46629.14840028965,
+      "max_block": 47928.95590958488
+    },
+    "telegraph": {
+      "intent": "MINING_HASHPRICE_VERIFY_GENERAL",
+      "requested_miner": "71083",
+      "miner_id": "71083",
+      "miner_name": "Bitcoin Block Hashprice",
+      "http_status": 200,
+      "paid": true,
+      "cost_usd": 0.01,
+      "field_status": {
+        "hashprice_sats_per_ph_day": "ok",
+        "block_height": "ok",
+        "hashrate_eh_s": "ok",
+        "hashprice_usd_per_ph_day": "missing"
+      },
+      "value": 46722.500822,
+      "returned_height": 977215,
+      "signal_hash": "0x83384b3dda597e99eff88b85461c7144b56f2648a60abede4b509dd3dd408c2a",
+      "rail": "escrow",
+      "receipt_hash": "0xf2e810953bcdf1ad2162f676f13b54ec1a4d37e71e61cefefd6b0ef5858053c7",
+      "epoch_id": 44,
+      "tx_hash": null,
+      "receipt_file": "2026-11-23T14-17-33-585Z-hashprice-977215.json",
+      "accepted": true
+    },
+    "public_at_telegraph_height": 46722.500821803624,
+    "comparison": "single_block_at_returned_height",
+    "tolerance_rel": 0.01,
+    "miner_role": "primary"
+  },
+  "btc": {
+    "value_usd": 62812,
+    "source": "public",
+    "label": "public: mempool.space BTC/USD; Telegraph price not used: differs 1.41% from the public BTC/USD price (limit 0.5%)",
+    "public_usd": 62812,
+    "tolerance_rel": 0.005,
+    "telegraph": {
+      "intent": "CRYPTO_PRICE_USD",
+      "requested_miner": "7320",
+      "miner_id": "7320",
+      "miner_name": "FinWire Crypto Price",
+      "http_status": 200,
+      "paid": true,
+      "cost_usd": 0.01,
+      "field_status": {
+        "price_usd": "ok"
+      },
+      "value": 63698,
+      "returned_height": null,
+      "signal_hash": "0x552e89fa8a79a70f70a557edca8a7c7a8b8854e6b961aacde11063f24482aec2",
+      "rail": "escrow",
+      "receipt_hash": "0xb901f41d7e758e4d9806f05db3a77a113ec95190a6e1106549ca16591366d2ff",
+      "epoch_id": 44,
+      "tx_hash": null,
+      "receipt_file": "2026-11-23T14-17-36-482Z-btc-2026-11-23T14-00-00Z.json",
+      "accepted": false,
+      "reject_reason": "differs 1.41% from the public BTC/USD price (limit 0.5%)"
+    }
+  },
+  "power": [
+    {
+      "node": "TH_SP15_GEN-APND",
+      "day_ahead_usd_per_mwh": 55.57737,
+      "day_ahead_interval": "2026-11-23T14:00:00.000Z",
+      "real_time_usd_per_mwh": 61.34382,
+      "real_time_interval": "2026-11-23T14:15:00.000Z",
+      "telegraph": null,
+      "errors": []
+    },
+    {
+      "node": "TH_NP15_GEN-APND",
+      "day_ahead_usd_per_mwh": 79.27791,
+      "day_ahead_interval": "2026-11-23T14:00:00.000Z",
+      "real_time_usd_per_mwh": 64.40161,
+      "real_time_interval": "2026-11-23T14:15:00.000Z",
+      "telegraph": null,
+      "errors": []
+    },
+    {
+      "node": "TH_ZP26_GEN-APND",
+      "day_ahead_usd_per_mwh": 62.02786,
+      "day_ahead_interval": "2026-11-23T14:00:00.000Z",
+      "real_time_usd_per_mwh": 62.51947,
+      "real_time_interval": "2026-11-23T14:15:00.000Z",
+      "telegraph": null,
+      "errors": []
+    }
+  ],
+  "spend": {
+    "paid_calls": 2,
+    "cost_usd": 0.02
+  },
+  "wallet_usdc_after": "5.78",
+  "notes": [],
+  "degraded": [],
+  "payment": {
+    "rail": "escrow",
+    "rail_reason": "escrow funded: 5820000 uUSDC available",
+    "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+    "network": "eip155:11155111",
+    "pay_to": "0x72a70e949362670Bf8bceAd24eFC5b8f950aa08b",
+    "requested": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+    "allowed": [
+      "0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238",
+      "0xcc194e1a843B658526D0D5C431f670028582Ae17"
+    ]
+  }
+}

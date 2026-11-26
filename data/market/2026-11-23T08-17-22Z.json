@@ -1,0 +1,125 @@
+{
+  "schema": 1,
+  "interval_start": "2026-11-23T08:00:00Z",
+  "recorded_at": "2026-11-23T08:17:22.570Z",
+  "block_height": 977171,
+  "btc_usd": 61127,
+  "hashprice": {
+    "value_sats_per_ph_day": 46740.193856,
+    "source": "telegraph",
+    "label": "Telegraph miner 71083: equals the public single-block value at block 977171 within 1% (0.000% apart)",
+    "public_144": {
+      "tip": 977171,
+      "blocks": 144,
+      "from_height": 977028,
+      "to_height": 977171,
+      "hashprice_sats_per_ph_day": 46860.275957979065,
+      "min_block": 46645.90919299806,
+      "max_block": 47928.95590958488
+    },
+    "telegraph": {
+      "intent": "MINING_HASHPRICE_VERIFY_GENERAL",
+      "requested_miner": "71083",
+      "miner_id": "71083",
+      "miner_name": "Bitcoin Block Hashprice",
+      "http_status": 200,
+      "paid": true,
+      "cost_usd": 0.01,
+      "field_status": {
+        "hashprice_sats_per_ph_day": "ok",
+        "block_height": "ok",
+        "hashrate_eh_s": "ok",
+        "hashprice_usd_per_ph_day": "missing"
+      },
+      "value": 46740.193856,
+      "returned_height": 977171,
+      "signal_hash": "0x48811088ecacc8785d3f21c4f8dea7fead2c975d17ce2d55e563d9adacd9c39e",
+      "rail": "escrow",
+      "receipt_hash": "0x6916d2762732eca2993cbc6a35ffa427a8d302fba3710243b870bfb80377e293",
+      "epoch_id": 42,
+      "tx_hash": null,
+      "receipt_file": "2026-11-23T08-17-33-120Z-hashprice-977171.json",
+      "accepted": true
+    },
+    "public_at_telegraph_height": 46740.193855552854,
+    "comparison": "single_block_at_returned_height",
+    "tolerance_rel": 0.01,
+    "miner_role": "primary"
+  },
+  "btc": {
+    "value_usd": 61127,
+    "source": "telegraph",
+    "label": "Telegraph miner 7320, within 0.5% of the public mempool.space price",
+    "public_usd": 61191,
+    "tolerance_rel": 0.005,
+    "telegraph": {
+      "intent": "CRYPTO_PRICE_USD",
+      "requested_miner": "7320",
+      "miner_id": "7320",
+      "miner_name": "FinWire Crypto Price",
+      "http_status": 200,
+      "paid": true,
+      "cost_usd": 0.01,
+      "field_status": {
+        "price_usd": "ok"
+      },
+      "value": 61127,
+      "returned_height": null,
+      "signal_hash": "0xc2e299b6ae05b07beb303f3142503e38380b884a1a5e33bf260c0f72598eeafd",
+      "rail": "escrow",
+      "receipt_hash": "0x606ee01b4ddfbcd4f10eae2a37e86c4f5c9ae1a6d4969a9dd7e2e52430e233d7",
+      "epoch_id": 42,
+      "tx_hash": null,
+      "receipt_file": "2026-11-23T08-17-36-456Z-btc-2026-11-23T08-00-00Z.json",
+      "accepted": true
+    }
+  },
+  "power": [
+    {
+      "node": "TH_SP15_GEN-APND",
+      "day_ahead_usd_per_mwh": 54.05583,
+      "day_ahead_interval": "2026-11-23T08:00:00.000Z",
+      "real_time_usd_per_mwh": 55.48655,
+      "real_time_interval": "2026-11-23T08:15:00.000Z",
+      "telegraph": null,
+      "errors": []
+    },
+    {
+      "node": "TH_NP15_GEN-APND",
+      "day_ahead_usd_per_mwh": 60.84901,
+      "day_ahead_interval": "2026-11-23T08:00:00.000Z",
+      "real_time_usd_per_mwh": 59.32254,
+      "real_time_interval": "2026-11-23T08:15:00.000Z",
+      "telegraph": null,
+      "errors": []
+    },
+    {
+      "node": "TH_ZP26_GEN-APND",
+      "day_ahead_usd_per_mwh": 55.96929,
+      "day_ahead_interval": "2026-11-23T08:00:00.000Z",
+      "real_time_usd_per_mwh": 56.88681,
+      "real_time_interval": "2026-11-23T08:15:00.000Z",
+      "telegraph": null,
+      "errors": []
+    }
+  ],
+  "spend": {
+    "paid_calls": 2,
+    "cost_usd": 0.02
+  },
+  "wallet_usdc_after": "5.78",
+  "notes": [],
+  "degraded": [],
+  "payment": {
+    "rail": "escrow",
+    "rail_reason": "escrow funded: 5940000 uUSDC available",
+    "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+    "network": "eip155:11155111",
+    "pay_to": "0x72a70e949362670Bf8bceAd24eFC5b8f950aa08b",
+    "requested": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+    "allowed": [
+      "0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238",
+      "0xcc194e1a843B658526D0D5C431f670028582Ae17"
+    ]
+  }
+}
