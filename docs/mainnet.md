@@ -1,6 +1,6 @@
 # Path to mainnet
 
-**Hushrate is NOT live on mainnet and has never run on it.** Every payment today is Ethereum Sepolia test USDC at $0.01 per request. As of 2026-11-22 Telegraph does not advertise a mainnet payment option ([mainnet-probe.md](mainnet-probe.md): free calls, with timestamps), so this repository contains **no mainnet addresses**, and none were invented.
+**Hushrate is NOT live on mainnet and has never run on it.** Every payment recorded here is Ethereum Sepolia test USDC at $0.01 per request. As of 2026-11-22 Telegraph does not advertise a mainnet payment option ([mainnet-probe.md](mainnet-probe.md): free calls, with timestamps), so this repository contains **no mainnet addresses**, and none were invented.
 
 > **Update, 23 Nov 2026.** A member of the Telegraph team replied in the hackathon Discord channel that mainnet is expected in "Dec-Jan, hopefully". That is not a confirmation and no date was given. They also pointed to the Anjoman API as an alternative. The reply came after the probe below (22 Nov 2026) and gave no node, asset, payee or payment rail, so there is still nothing real to put in the mainnet entry. Hushrate therefore stays on testnet for this submission, and it has never run on mainnet.
 
@@ -40,7 +40,7 @@ Mainnet node URL, asset, payee or Diamond, offered rails, price and multiplier, 
 2. Run `npm run dryrun -- --network mainnet` by hand. It must report `all pins passed`, show the amount that would be paid and the unsigned request, and say nothing was signed. A wrong network, payee or asset, an amount above the cap, or an unreadable balance gives `refused` or `unreachable`, and nothing is paid.
 3. Only then, deliberately: set `enabled: true`, set `"active": "mainnet"`, fund a dedicated low-balance wallet, give its key to the machine that runs the agent, and set `HUSHRATE_MAINNET_ENABLE`. The agent refuses to start if any of these is missing. The enabled switch and the acknowledgement are guards on purpose: filling the entry and changing `active` is the configuration change, and the guards make sure it cannot happen by accident.
 
-## Cost and risk (at the current volume of 2 paid calls per run)
+## Cost and risk (at 2 paid calls per run, run hourly; the agent is paused now)
 
 | Item | Amount |
 |---|---|

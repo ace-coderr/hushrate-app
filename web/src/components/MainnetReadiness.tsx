@@ -10,7 +10,7 @@ export function MainnetReadiness({ compact = false }: { compact?: boolean }) {
   return (
     <div className="card">
       <h3>Mainnet readiness</h3>
-      <p><b>Hushrate has not run on mainnet.</b> Every payment today is Ethereum Sepolia test USDC. The dry run checks the mainnet payment path against the network's live payment terms and stops before signing; it uses no key.</p>
+      <p><b>Hushrate has not run on mainnet.</b> Every payment recorded here is Ethereum Sepolia test USDC. The dry run checks the mainnet payment path against the network's live payment terms and stops before signing; it uses no key.</p>
       <p><b>Update, 23 Nov 2026.</b> A member of the Telegraph team replied in the hackathon Discord channel that mainnet is expected in "Dec-Jan, hopefully": not confirmed, and no date was given. They also pointed to the Anjoman API as an alternative. The reply came after the probe (22 Nov 2026) and gave no node, asset, payee or rail, so Hushrate stays on testnet for this submission and has never run on mainnet.</p>
       {d.loading && <p className="muted">Loading the last dry run…</p>}
       {!d.loading && !r && <p className="muted">No dry run is published yet ({d.error}).</p>}

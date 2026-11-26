@@ -185,7 +185,7 @@ npm run build -w packages/mcp`}</code></pre>
         </ul>
 
         <h2 id="mainnet">Path to mainnet (not live)</h2>
-        <p><b>Hushrate is NOT live on mainnet.</b> Every payment today is Ethereum Sepolia test USDC. Telegraph's published documentation lists testnet addresses only, so this repository contains no mainnet addresses and none were invented.</p>
+        <p><b>Hushrate is NOT live on mainnet.</b> Every payment recorded here is Ethereum Sepolia test USDC. Telegraph's published documentation lists testnet addresses only, so this repository contains no mainnet addresses and none were invented.</p>
         <MainnetReadiness />
 
         <h3>What differs between Sepolia and mainnet</h3>
@@ -209,7 +209,7 @@ npm run build -w packages/mcp`}</code></pre>
         <p>Price today is $0.01 per call on the testnet. Telegraph documents that a mainnet price can be higher: the floor is multiplied by a demand tier (1x up to 10x). Hushrate refuses any payment above its 3-cent cap, so a price above that stops the run instead of being paid.</p>
         <div className="scroll">
           <table>
-            <thead><tr><th>Item</th><th>At the current volume</th></tr></thead>
+            <thead><tr><th>Item</th><th>If run hourly (paused now)</th></tr></thead>
             <tbody>
               <tr><td>Per run (2 paid calls at $0.01)</td><td className="mono">$0.02</td></tr>
               <tr><td>Per day (24 runs)</td><td className="mono">$0.48</td></tr>
