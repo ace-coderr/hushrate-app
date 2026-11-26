@@ -1,0 +1,125 @@
+{
+  "schema": 1,
+  "interval_start": "2026-11-22T10:00:00Z",
+  "recorded_at": "2026-11-22T10:17:18.245Z",
+  "block_height": 977035,
+  "btc_usd": 60835.2,
+  "hashprice": {
+    "value_sats_per_ph_day": 46782.691842,
+    "source": "telegraph",
+    "label": "Telegraph miner 71083: equals the public single-block value at block 977035 within 1% (0.000% apart)",
+    "public_144": {
+      "tip": 977035,
+      "blocks": 144,
+      "from_height": 976892,
+      "to_height": 977035,
+      "hashprice_sats_per_ph_day": 46869.577239115904,
+      "min_block": 46626.97267383998,
+      "max_block": 47733.36851635784
+    },
+    "telegraph": {
+      "intent": "MINING_HASHPRICE_VERIFY_GENERAL",
+      "requested_miner": "71083",
+      "miner_id": "71083",
+      "miner_name": "Bitcoin Block Hashprice",
+      "http_status": 200,
+      "paid": true,
+      "cost_usd": 0.01,
+      "field_status": {
+        "hashprice_sats_per_ph_day": "ok",
+        "block_height": "ok",
+        "hashrate_eh_s": "ok",
+        "hashprice_usd_per_ph_day": "missing"
+      },
+      "value": 46782.691842,
+      "returned_height": 977035,
+      "signal_hash": "0xee2b6df96bf3e28d279d477e745b48ca04ff094b6b3f8c5dbee7ca695df57b6a",
+      "rail": "escrow",
+      "receipt_hash": "0x849baeb950ef2414895b17b0cdb975fda35607d2ebcf10c8733c0b588aba766d",
+      "epoch_id": 37,
+      "tx_hash": null,
+      "receipt_file": "2026-11-22T10-17-27-101Z-hashprice-977035.json",
+      "accepted": true
+    },
+    "public_at_telegraph_height": 46782.69184193935,
+    "comparison": "single_block_at_returned_height",
+    "tolerance_rel": 0.01,
+    "miner_role": "primary"
+  },
+  "btc": {
+    "value_usd": 60835.2,
+    "source": "telegraph",
+    "label": "Telegraph miner 7320, within 0.5% of the public mempool.space price",
+    "public_usd": 60934,
+    "tolerance_rel": 0.005,
+    "telegraph": {
+      "intent": "CRYPTO_PRICE_USD",
+      "requested_miner": "7320",
+      "miner_id": "7320",
+      "miner_name": "FinWire Crypto Price",
+      "http_status": 200,
+      "paid": true,
+      "cost_usd": 0.01,
+      "field_status": {
+        "price_usd": "ok"
+      },
+      "value": 60835.2,
+      "returned_height": null,
+      "signal_hash": "0x7e924d59ae169a57544ee010a59f1b8b11f0b59534dd01da51b26ec1e485e59e",
+      "rail": "escrow",
+      "receipt_hash": "0x37d6ba10f12de831b30b539c1bc66f607e3f4f3a7506cfc3af92fe99ba61ad95",
+      "epoch_id": 37,
+      "tx_hash": null,
+      "receipt_file": "2026-11-22T10-17-31-372Z-btc-2026-11-22T10-00-00Z.json",
+      "accepted": true
+    }
+  },
+  "power": [
+    {
+      "node": "TH_SP15_GEN-APND",
+      "day_ahead_usd_per_mwh": 53.50753,
+      "day_ahead_interval": "2026-11-22T10:00:00.000Z",
+      "real_time_usd_per_mwh": 66.81972,
+      "real_time_interval": "2026-11-22T10:15:00.000Z",
+      "telegraph": null,
+      "errors": []
+    },
+    {
+      "node": "TH_NP15_GEN-APND",
+      "day_ahead_usd_per_mwh": 58.33093,
+      "day_ahead_interval": "2026-11-22T10:00:00.000Z",
+      "real_time_usd_per_mwh": 68.25276,
+      "real_time_interval": "2026-11-22T10:15:00.000Z",
+      "telegraph": null,
+      "errors": []
+    },
+    {
+      "node": "TH_ZP26_GEN-APND",
+      "day_ahead_usd_per_mwh": 54.75963,
+      "day_ahead_interval": "2026-11-22T10:00:00.000Z",
+      "real_time_usd_per_mwh": 66.8128,
+      "real_time_interval": "2026-11-22T10:15:00.000Z",
+      "telegraph": null,
+      "errors": []
+    }
+  ],
+  "spend": {
+    "paid_calls": 2,
+    "cost_usd": 0.02
+  },
+  "wallet_usdc_after": "5.78",
+  "notes": [],
+  "degraded": [],
+  "payment": {
+    "rail": "escrow",
+    "rail_reason": "escrow funded: 6380000 uUSDC available",
+    "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+    "network": "eip155:11155111",
+    "pay_to": "0x72a70e949362670Bf8bceAd24eFC5b8f950aa08b",
+    "requested": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+    "allowed": [
+      "0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238",
+      "0xcc194e1a843B658526D0D5C431f670028582Ae17"
+    ]
+  }
+}

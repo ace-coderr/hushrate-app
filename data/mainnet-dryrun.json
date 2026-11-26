@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "kind": "mainnet-dryrun",
+  "generated_at": "2026-11-22T18:52:06.329Z",
+  "network": "mainnet",
+  "testnet": false,
+  "caip2": null,
+  "node": null,
+  "signing": "never: this is a dry run",
+  "caps": null,
+  "would_pay": [],
+  "unsigned_requests": [],
+  "planned_cost_per_run_uusdc": null,
+  "status": "not_configured",
+  "summary": "Nothing to validate: network \"mainnet\" is missing caip2, chain_id, rpc_url, assets (the allow-list is empty), telegraph_node, expected_wallet, explorer_tx, max_amount_per_payment, max_paid_calls_per_run, min_balance_units; refusing to run (nothing is defaulted). Hushrate does not guess mainnet values; they must come from Telegraph.",
+  "checks": [
+    {
+      "name": "network entry is complete",
+      "ok": false,
+      "detail": "network \"mainnet\" is missing caip2, chain_id, rpc_url, assets (the allow-list is empty), telegraph_node, expected_wallet, explorer_tx, max_amount_per_payment, max_paid_calls_per_run, min_balance_units; refusing to run (nothing is defaulted)"
+    }
+  ]
+}

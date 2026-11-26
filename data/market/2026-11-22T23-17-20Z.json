@@ -1,0 +1,125 @@
+{
+  "schema": 1,
+  "interval_start": "2026-11-22T23:00:00Z",
+  "recorded_at": "2026-11-22T23:17:20.784Z",
+  "block_height": 977117,
+  "btc_usd": 60987.5,
+  "hashprice": {
+    "value_sats_per_ph_day": 46712.52265,
+    "source": "telegraph",
+    "label": "Telegraph miner 71083: equals the public single-block value at block 977117 within 1% (0.000% apart)",
+    "public_144": {
+      "tip": 977117,
+      "blocks": 144,
+      "from_height": 976974,
+      "to_height": 977117,
+      "hashprice_sats_per_ph_day": 46812.25506677638,
+      "min_block": 46626.97267383996,
+      "max_block": 47628.27475169619
+    },
+    "telegraph": {
+      "intent": "MINING_HASHPRICE_VERIFY_GENERAL",
+      "requested_miner": "71083",
+      "miner_id": "71083",
+      "miner_name": "Bitcoin Block Hashprice",
+      "http_status": 200,
+      "paid": true,
+      "cost_usd": 0.01,
+      "field_status": {
+        "hashprice_sats_per_ph_day": "ok",
+        "block_height": "ok",
+        "hashrate_eh_s": "ok",
+        "hashprice_usd_per_ph_day": "missing"
+      },
+      "value": 46712.52265,
+      "returned_height": 977117,
+      "signal_hash": "0x3609a5114c0c9d3bb624d409374130ccee1e57ca3675890ce1245522ecd15d06",
+      "rail": "escrow",
+      "receipt_hash": "0x089c9c3993e9b9c4575244ba638f9551a964214b5fd25ff94784cb25e3d9eacf",
+      "epoch_id": 40,
+      "tx_hash": null,
+      "receipt_file": "2026-11-22T23-17-28-509Z-hashprice-977117.json",
+      "accepted": true
+    },
+    "public_at_telegraph_height": 46712.522649651415,
+    "comparison": "single_block_at_returned_height",
+    "tolerance_rel": 0.01,
+    "miner_role": "primary"
+  },
+  "btc": {
+    "value_usd": 60987.5,
+    "source": "telegraph",
+    "label": "Telegraph miner 7320, within 0.5% of the public mempool.space price",
+    "public_usd": 60772,
+    "tolerance_rel": 0.005,
+    "telegraph": {
+      "intent": "CRYPTO_PRICE_USD",
+      "requested_miner": "7320",
+      "miner_id": "7320",
+      "miner_name": "FinWire Crypto Price",
+      "http_status": 200,
+      "paid": true,
+      "cost_usd": 0.01,
+      "field_status": {
+        "price_usd": "ok"
+      },
+      "value": 60987.5,
+      "returned_height": null,
+      "signal_hash": "0x932abe35e127635955e82c5f3a78c2ed3dc96038e4ffcaabae81317fab314a51",
+      "rail": "escrow",
+      "receipt_hash": "0xac10e0004aaeedeb5859d13d130990e35b8b3db23ad76acd1b0e11596d185dc1",
+      "epoch_id": 40,
+      "tx_hash": null,
+      "receipt_file": "2026-11-22T23-17-31-847Z-btc-2026-11-22T23-00-00Z.json",
+      "accepted": true
+    }
+  },
+  "power": [
+    {
+      "node": "TH_SP15_GEN-APND",
+      "day_ahead_usd_per_mwh": 33.0962,
+      "day_ahead_interval": "2026-11-22T23:00:00.000Z",
+      "real_time_usd_per_mwh": 36.28559,
+      "real_time_interval": "2026-11-22T23:15:00.000Z",
+      "telegraph": null,
+      "errors": []
+    },
+    {
+      "node": "TH_NP15_GEN-APND",
+      "day_ahead_usd_per_mwh": 73.06245,
+      "day_ahead_interval": "2026-11-22T23:00:00.000Z",
+      "real_time_usd_per_mwh": 76.3699,
+      "real_time_interval": "2026-11-22T23:15:00.000Z",
+      "telegraph": null,
+      "errors": []
+    },
+    {
+      "node": "TH_ZP26_GEN-APND",
+      "day_ahead_usd_per_mwh": 43.24902,
+      "day_ahead_interval": "2026-11-22T23:00:00.000Z",
+      "real_time_usd_per_mwh": 38.99115,
+      "real_time_interval": "2026-11-22T23:15:00.000Z",
+      "telegraph": null,
+      "errors": []
+    }
+  ],
+  "spend": {
+    "paid_calls": 2,
+    "cost_usd": 0.02
+  },
+  "wallet_usdc_after": "5.78",
+  "notes": [],
+  "degraded": [],
+  "payment": {
+    "rail": "escrow",
+    "rail_reason": "escrow funded: 6120000 uUSDC available",
+    "asset": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+    "network": "eip155:11155111",
+    "pay_to": "0x72a70e949362670Bf8bceAd24eFC5b8f950aa08b",
+    "requested": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+    "allowed": [
+      "0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238",
+      "0xcc194e1a843B658526D0D5C431f670028582Ae17"
+    ]
+  }
+}
