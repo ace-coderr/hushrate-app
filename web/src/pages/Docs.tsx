@@ -77,14 +77,14 @@ export function Docs() {
               <tr><td>CAISO prices, mempool.space</td><td className="mono">free</td><td className="mono">$0.00</td></tr>
               <tr><td><b>Per hourly run</b></td><td className="mono">2</td><td className="mono"><b>$0.02</b></td></tr>
               <tr><td><b>Per day (24 runs)</b></td><td className="mono">48</td><td className="mono"><b>$0.48</b></td></tr>
-              <tr><td>To 1 December (19 days)</td><td className="mono">912</td><td className="mono">$9.12</td></tr>
+              <tr><td>19 days of hourly runs</td><td className="mono">912</td><td className="mono">$9.12</td></tr>
               <tr><td>Per 30 days</td><td className="mono">1,440</td><td className="mono">$14.40</td></tr>
               <tr><td>Per extra site</td><td className="mono">0</td><td className="mono">$0.00</td></tr>
               <tr><td>One 8 USDC escrow deposit (18 Nov) covers</td><td className="mono">800</td><td className="mono">about 16 days</td></tr>
             </tbody>
           </table>
         </div>
-        <p>Safety limits: at most 3 paid calls per run, at most 3 cents per payment, and the agent checks the wallet's balance of the pinned token before every run. The live total is on <a href="#/receipts">Receipts</a>.</p>
+        <p>Safety limits: at most 3 paid calls per run, at most 3 cents per payment, and the agent checks the wallet's balance of the pinned token before every run. The recorded total is on <a href="#/receipts">Receipts</a>.</p>
 
         <h2 id="rails">How the data is paid for</h2>
         <p>Hushrate tries three ways of getting each reading, in this order, and labels which one it used:</p>
@@ -107,13 +107,13 @@ export function Docs() {
             <thead><tr><th>Period</th><th>Purchases</th><th>Accepted by the old rule (within 1% of the 144-block mean)</th><th>Within 1% of the public value of the block the miner returned</th></tr></thead>
             <tbody>
               <tr><td>2026-11-12 16:10 to 2026-11-14 07:17 UTC</td><td className="mono">38</td><td className="mono">29 of 38 (76.3%)</td><td className="mono">38 of 38 (100%)</td></tr>
-              <tr><td>Last 24 hours (2026-11-13 07:17 to 2026-11-14 07:17 UTC)</td><td className="mono">26</td><td className="mono">17 of 26 (65.4%)</td><td className="mono">26 of 26 (100%)</td></tr>
+              <tr><td>The 24 hours 2026-11-13 07:17 to 2026-11-14 07:17 UTC</td><td className="mono">26</td><td className="mono">17 of 26 (65.4%)</td><td className="mono">26 of 26 (100%)</td></tr>
             </tbody>
           </table>
         </div>
         <ul>
           <li><b>What the diagnosis found.</b> The miner computes the hashprice of one block, the latest, and matched the public value of that block exactly in every purchase (median difference 0.00%). The old rule compared it with a 144-block mean. After the difficulty adjustment at block 975744 (-9.13%) that mean mixed two difficulty regimes and sat about 9% low for a day, so accurate values were rejected; the remaining rejections were ordinary single-block fee noise of 1.05% to 1.78%. The miner's data was not wrong.</li>
-          <li><b>The rule now.</b> The bought value must come from a successful call with the fields we use marked ok, for the block we asked about, and be within 1% of the public hashprice of that same block, which your browser recomputes on the Proof page. The 1% limit was not widened. The right-hand column is that rule replayed on the recorded data; the live rate will be added as hours accumulate.</li>
+          <li><b>The rule now.</b> The bought value must come from a successful call with the fields we use marked ok, for the block we asked about, and be within 1% of the public hashprice of that same block, which your browser recomputes on the Proof page. The 1% limit was not widened. The right-hand column is that rule replayed on the recorded data. No separate live rate under the new rule is reported here.</li>
           <li><b>The fallback.</b> If the Telegraph value is unavailable or fails, the public value of the latest block is used, with the same definition, and the tape says why. A second miner is tried only when the first signed no payment, so hashprice is never bought twice in one hour.</li>
           <li><b>Old tapes</b> keep the rule they were recorded under, and Proof re-applies that rule to them.</li>
         </ul>
@@ -148,13 +148,13 @@ export function Docs() {
 cd hushrate-app
 npm install
 cp .env.example .env      # set EVM_PRIVATE_KEY to a Sepolia TEST wallet
-npm run wallet            # check test ETH and test USDC
-npm run agent -- --no-pay # free: public sources only
-npm run agent             # buys one hashprice reading, writes data/`}</code></pre>
-        <p>Fund the test wallet with Circle's test USDC on Ethereum Sepolia (token 0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238) from <a href="https://faucet.circle.com/" target="_blank" rel="noopener noreferrer">Circle's faucet</a>: pick Ethereum Sepolia and USDC. The previous token (0xcc194e…Ae17) can still be minted with <code>npm run mint -w agent -- --confirm</code>. The agent pays at most 3 cents per payment and at most 3 paid calls per run, never retries a settled payment, pays only the allow-listed assets to their pinned payees, and without enough balance of the asset the node asks for makes no paid calls at all.</p>
+npm run wallet            # test ETH and test USDC of the configured wallet
+npm run agent -- --no-pay --dry # free: public sources only, writes nothing
+npm run agent             # pays for two readings, writes data/`}</code></pre>
+        <p>Before paid calls with your own test wallet, set <code>expected_wallet</code> in <code>config/networks.json</code> to its address: the agent refuses a key that does not control that address. Fund Telegraph's escrow with the previous test USDC (0xcc194e…Ae17): mint it with <code>npm run mint -w agent -- --confirm</code>, then run <code>npx tsx scripts/fund-escrow.ts</code> to see the plan and add <code>--execute</code> to deposit. The wallet also needs a little Sepolia test ETH. The exact (settlement) rail can also use Circle's test USDC from <a href="https://faucet.circle.com/" target="_blank" rel="noopener noreferrer">Circle's faucet</a>, but on 22 Nov 2026 the node offered only escrow on Sepolia. The agent pays at most 3 cents per payment and at most 3 paid calls per run, never retries a settled payment, pays only the pinned payees, and makes no paid calls when it cannot cover the run.</p>
 
         <h2 id="repro">Reproduce the build</h2>
-        <pre><code>{`npm test                    # decision math, hand-computed
+        <pre><code>{`npm test                    # all tests: core, MCP, agent, web
 npm run typecheck
 npm run build -w web        # static site in web/dist
 npm run build -w packages/mcp`}</code></pre>

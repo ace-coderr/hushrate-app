@@ -51,7 +51,7 @@ The intent description on the node also contains the word mainnet, but it refers
 ## What the documentation says about mainnet
 
 - `protocol/addresses-and-params`: "Most ask you to sign in, solve a captcha or hold a little mainnet ETH."
-- `protocol/addresses-and-params`: "Network Configuration Parameter Value Chain Ethereum Sepolia Chain ID 11155111 Canonical mainnet Ethereum RPC (public, no key) https://ethereum-sepolia-rpc."
+- `protocol/addresses-and-params`: "Network Configuration Parameter Value Chain Ethereum Sepolia Chain ID 11155111 Canonical mainnet Ethereum RPC (public, no key) …"
 - `protocol/addresses-and-params`: "3 failed rounds) Minimum Validator stake Set in USD, paid in MACHINA at the pool price ( protocolParams() ) Unbonding period 21 days Epoch duration 24 hours on mainnet; 1 hour on the testnet Commit phase timeout 45 seconds Reveal phase timeout 45 seconds Leader failover timeout 90 seconds Scoring & Penalties Parameter Value C"
 - `protocol/how-it-works`: "The canonical chain for Telegraph mainnet is Ethereum ."
 - `using/escrow-inference`: "A node on Ethereum mainnet refuses a signature without it."

@@ -48,12 +48,12 @@ The default fleet is a **sample fleet of demo assumptions**, labelled as such in
 | Paid calls per run | 2 planned (hashprice + BTC price), hard cap 3 |
 | Per run | $0.02 |
 | Per day (24 runs) | $0.48 |
-| To 1 Dec (19 days) | $9.12 |
+| 19 days of hourly runs | $9.12 |
 | Per extra site | $0.00 (one tape serves every site) |
 | Escrow deposit | 8.00 USDC, once (2026-11-18), covers about 16 days at $0.48/day; topped up with `scripts/fund-escrow.ts` (at most 8 USDC per run) |
 | Rail | escrow first, then exact (settlement), then labelled public values; same $0.01 per call on each |
 
-The agent never retries after a payment settled, buys each intent at most once per UTC hour (a per-intent same-hour guard: a run that already paid for hashprice buys only the missing BTC price, and an hour that paid for both is a no-op), skips an identical request it already paid for, and pauses (writes `data/status.json`, buys nothing) if the test-USDC balance is below 0.20. A request that settles and then fails upstream is credited back to escrow by the node and shows in the ledger as billed $0.
+The agent never retries after a payment settled, buys each intent at most once per UTC hour (a per-intent same-hour guard: a run that already paid for hashprice buys only the missing BTC price, and an hour that paid for both is a no-op), skips an identical request it already paid for, and buys nothing (recording labelled public values) when the escrow, or the wallet balance of the asked-for asset, cannot cover the run. A balance below 0.20 that can still pay only adds a note. A request that settles and then fails upstream is credited back to escrow by the node and shows in the ledger as billed $0.
 
 ## Frontier check
 
@@ -66,10 +66,10 @@ Measured on every recorded Telegraph hashprice purchase (miner 71083), from `dat
 | Period | Purchases | Accepted by the rule in force until 2026-11-14 (within 1% of the public 144-block mean) | Within 1% of the public value of the block the miner returned |
 |---|---|---|---|
 | 2026-11-12 16:10 to 2026-11-14 07:17 UTC | 38 | 29 of 38 (76.3%) | 38 of 38 (100%) |
-| Last 24 hours (2026-11-13 07:17 to 2026-11-14 07:17 UTC) | 26 | 17 of 26 (65.4%) | 26 of 26 (100%) |
+| The 24 hours 2026-11-13 07:17 to 2026-11-14 07:17 UTC | 26 | 17 of 26 (65.4%) | 26 of 26 (100%) |
 
 - **What the diagnosis found.** The miner computes the hashprice of one block, the latest, and matches the public value of that block exactly (median difference 0.00% over 38 purchases). The old rule compared it with a 144-block mean. After the difficulty adjustment at block 975744 (-9.13%) that mean mixed two difficulty regimes and sat about 9% low for a day, so three accurate purchases were rejected; the other six rejections were single-block fee noise of 1.05% to 1.78%. Nothing was wrong with the miner's data.
-- **The fix.** From 2026-11-14 the value is checked against the public hashprice of the same block, with the same required fields, the same stale-height check and the **same 1% limit**. The right-hand column is that rule applied to the recorded data (a replay, not a new live measurement). The live rate will be reported here once more hours have run under the new rule.
+- **The fix.** From 2026-11-14 the value is checked against the public hashprice of the same block, with the same required fields, the same stale-height check and the **same 1% limit**. The right-hand column is that rule applied to the recorded data (a replay, not a new live measurement). No separate live rate under the new rule is reported here.
 - **The fallback.** If the Telegraph value is unavailable or fails the check, the agent uses the public single-block value of the latest block, the same definition, and the tape says why. A second miner (1900999013) is tried only if the first signed no payment, so hashprice is never bought twice in an hour.
 - **Old tapes** keep the rule they were recorded under, and the Proof page re-applies that rule to them.
 - **A separate finding.** Two hourly runs on 2026-11-13 at 16:17 and 16:20 UTC both bought data for the same hour (four payments, $0.04); the cause and fix are in the diagnosis section of the drift document.
@@ -103,7 +103,7 @@ Network `eip155:11155111` (Ethereum Sepolia, testnet). Per-payment cap 30000 uni
 
 - **Before any miner is called**, the agent reads the node's payment terms for free (a request without payment returns the 402 challenge). If the node asks for anything off the allow-list (another asset, the right asset to a different payee, another network), nothing is called and the degraded reason names the asset and network it asked for. If the asked-for asset is allowed, the agent checks the wallet's balance **of that asset**; if it is below the cost of the run it records `unfunded for USDC 0x…` and labelled public values, and again calls no miner.
 - **Balances** of both assets are read every run and shown in `data/status.json` and on the Settings page. Every new tape, receipt and ledger row records the asset it was paid in; older ones have none recorded and are read as the previous asset.
-- **Funding.** Circle's token: https://faucet.circle.com/ (network **Ethereum Sepolia**, token **USDC**), to the wallet address in `config/networks.json`; Hushrate cannot mint it. The previous token can still be minted with `npm run mint -w agent -- --confirm` (dry run without the flag). Only the asset the node currently asks for is useful; check with `npm run wallet`.
+- **Funding the exact rail** (escrow is funded separately, see [Running the agent](#running-the-agent-paused-in-this-snapshot); on 2026-11-22 the node offered only escrow on Sepolia). Circle's token: https://faucet.circle.com/ (network **Ethereum Sepolia**, token **USDC**), to the wallet address in `config/networks.json`; Hushrate cannot mint it. The previous token can still be minted with `npm run mint -w agent -- --confirm` (dry run without the flag). Only the asset the node currently asks for is useful; check with `npm run wallet`.
 
 **What happened on 2026-11-17.** The node switched to Circle's token and a new payee. From the 07:17 UTC run every paid call was refused by Hushrate's own spend controls (nothing was signed, nothing was lost), and 7 hourly tapes (07:00 to 13:00 UTC) used labelled public values. The failure reason did not name the asset, and nothing flagged the run of public-only hours; both are fixed (specific refusal reasons, a funding check per asset, a "Paid data paused" banner). After the wallet was funded, the first run signed both payments and the node verified them, but its facilitator timed out while settling (HTTP 402, nothing moved); that is recorded as unsettled, not as a purchase. Full record: [docs/payment-asset-change.md](docs/payment-asset-change.md).
 
@@ -157,7 +157,7 @@ git clone https://github.com/ace-coderr/hushrate-app.git
 cd hushrate-app
 npm install
 cp .env.example .env           # set EVM_PRIVATE_KEY to a Sepolia TEST wallet
-npm run wallet                 # test ETH and test USDC balances (read-only)
+npm run wallet                 # test ETH and test USDC of the wallet named in config/networks.json (read-only)
 npm run agent -- --no-pay --dry   # free: print a tape from public sources only
 npm run agent                  # pays for two readings (about 0.02 test USDC) and writes data/
 npm run billing                # later: checks the node's billing record for each escrow receipt (free)
@@ -166,10 +166,12 @@ npm run dev -w web             # local web app (serves ../data at /data)
 
 Other scripts: `npm run probe` (free discovery), `npx tsx agent/src/btc-probe.ts <minerId>...` (BTC price miner probe, up to 3 paid calls), `MEMPOOL_BASE=<mirror> npx tsx agent/src/hashprice-probe.ts <minerId>...` (hashprice miner probe, up to 5 paid calls and $0.06, each answer compared with the public value at the height it returned), `npx tsx scripts/hashprice-drift.mts` (free; regenerates docs/hashprice-drift.md from the recorded tapes), `npm run retest -w agent` (power-price retest, up to 3 paid calls), `npm run ledger -w agent`, and `npm run mint -w agent` (dry run unless `--confirm`; mints Sepolia test USDC via `mint(address,uint256)`).
 
+**To make paid calls with your own test wallet**, set `networks.sepolia.expected_wallet` in `config/networks.json` to its address first: the agent refuses a key that does not control that address, and refuses to start paying without a key. Escrow is funded in the previous test USDC (`0xcc19…Ae17`): mint it with `npm run mint -w agent -- --confirm`, then deposit it (see [Running the agent](#running-the-agent-paused-in-this-snapshot)). The wallet also needs a little Sepolia test ETH for gas.
+
 ## Reproduce the build and checks
 
 ```bash
-npm test               # core and MCP tests (hand-computed)
+npm test               # all tests: core, MCP, agent and web
 npm run typecheck
 npm run build -w web   # static site in web/dist (served under /hushrate-app/; set VITE_BASE to change it)
 npm run build -w packages/mcp

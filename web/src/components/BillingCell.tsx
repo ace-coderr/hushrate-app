@@ -13,5 +13,5 @@ function BillingStatus({ r }: { r: LedgerRow }) {
   if (r.rail !== "escrow") return <span className="muted">n/a (settled per call)</span>;
   if (r.billing_verified === true) return <><span className="badge run">verified</span><br /><small className="muted">{r.billing_checked_at ? hourLabel(r.billing_checked_at) : ""}</small></>;
   if (r.billing_verified === false) return <><span className="badge cut">not found</span><br /><small className="muted">{r.billing_status}</small></>;
-  return <><span className="badge hold">pending</span><br /><small className="muted">{r.billing_checked_at ? `checked ${hourLabel(r.billing_checked_at)}, epoch block not recorded yet` : "not checked yet; no result was recorded before the agent was paused"}</small></>;
+  return <><span className="badge hold">pending</span><br /><small className="muted">{r.billing_checked_at ? `checked ${hourLabel(r.billing_checked_at)}, epoch block not recorded at that time` : "not checked yet; no result was recorded before the agent was paused"}</small></>;
 }

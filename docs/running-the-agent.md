@@ -21,7 +21,7 @@ This page is documentation only. **Nothing in this repository is scheduled or ru
 Do this only if running it is allowed where you host it, and check that host's terms for scheduled automation first.
 
 1. Use a machine you control (or a scheduler whose terms permit it), with this repository, Node 20 or newer and `npm install`.
-2. Put a Sepolia **test** wallet key in `.env` on that machine. Never commit it. Fund the escrow (`scripts/fund-escrow.ts`, see the README).
+2. Put a Sepolia **test** wallet key in `.env` on that machine. Never commit it. If it is your own wallet, set `networks.sepolia.expected_wallet` in `config/networks.json` to its address (the agent refuses any other). Fund the escrow (`scripts/fund-escrow.ts`, see the README).
 3. Schedule, once an hour: `npm run agent`, then `npm run billing`. One run at a time.
 4. Publish the new `data/` however you serve the site: `npm run build -w web` produces `web/dist` with the data copied in.
 5. A successful run writes a new `data/status.json` without the paused fields, so the paused banner disappears.
