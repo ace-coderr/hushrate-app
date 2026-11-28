@@ -69,8 +69,13 @@ main.page { max-width: 1120px; margin: 0 auto; padding: 28px 16px 72px; animatio
 /* cards */
 .card { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 20px; box-shadow: var(--shadow); }
 .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
-dl { display: grid; grid-template-columns: 1fr auto; gap: 8px 16px; margin: 16px 0 0; }
-dt { color: var(--muted); } dd { margin: 0; text-align: right; }
+/* Label / value lists. The label column fits its text (up to 45%) and the value column takes the rest. Labels break only between words,
+   even inside .prose, which sets overflow-wrap: anywhere and would otherwise let a label column collapse to one character. */
+dl { display: grid; grid-template-columns: fit-content(45%) minmax(0, 1fr); gap: 8px 16px; margin: 16px 0 0; }
+dt { color: var(--muted); overflow-wrap: break-word; } dd { margin: 0; min-width: 0; text-align: right; overflow-wrap: anywhere; }
+/* Lists whose values are sentences read left-aligned, and stack label over value on narrow screens. */
+dl.kv-text dd { text-align: left; }
+@media (max-width: 600px) { dl.kv-text { grid-template-columns: minmax(0, 1fr); gap: 2px; } dl.kv-text dt { margin-top: 10px; } }
 .grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
 .grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
 .grid6 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
@@ -128,7 +133,8 @@ dt { color: var(--muted); } dd { margin: 0; text-align: right; }
 .bar i { position: absolute; top: -5px; width: 3px; height: 18px; background: var(--ink); border-radius: 2px; transition: left .6s cubic-bezier(.2,.8,.2,1); }
 .scale { display: flex; justify-content: space-between; gap: 12px; font-size: .75rem; color: var(--muted); margin-top: 6px; }
 .scroll { overflow-x: auto; border-radius: 16px; border: 1px solid var(--line); }
-table { width: 100%; border-collapse: collapse; background: var(--card); font-size: .92rem; }
+/* Table words never break mid-word (the .scroll wrapper scrolls sideways instead). */
+table { width: 100%; border-collapse: collapse; background: var(--card); font-size: .92rem; overflow-wrap: normal; }
 th, td { padding: 11px 14px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; white-space: nowrap; }
 td:nth-child(n) { white-space: normal; }
 th { color: var(--muted); font-weight: 600; font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; }

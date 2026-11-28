@@ -15,7 +15,7 @@ export function MainnetReadiness({ compact = false }: { compact?: boolean }) {
       {d.loading && <p className="muted">Loading the last dry run…</p>}
       {!d.loading && !r && <p className="muted">No dry run is published yet ({d.error}).</p>}
       {r && (
-        <dl>
+        <dl className="kv-text">
           <dt>Last dry run</dt><dd>{ago(r.generated_at)} · network <span className="mono">{r.network}</span></dd>
           <dt>Result</dt><dd><span className={`badge ${r.status === "ok" ? "run" : r.status === "not_configured" ? "hold" : "cut"}`}>{LABEL[r.status]}</span></dd>
           {!compact && <><dt>What it says</dt><dd>{r.summary}</dd></>}
